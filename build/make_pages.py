@@ -12,7 +12,8 @@ cut=src.index('<div class="wrap">')
 head,body=src[:cut],src[cut:]
 head=re.sub(r'<title>.*?</title>','<title>'+TITLE+'</title>',head,count=1)
 reset='<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>'
-meta=('<meta name="description" content="%s">\n<link rel="canonical" href="%s">\n'
+meta=('<meta name="google-site-verification" content="SKA5lfNMxx7JMXZP5Hy5OIqWLE1Oc9O142HKcLFrDaU" />\n'
+      '<meta name="description" content="%s">\n<link rel="canonical" href="%s">\n'
       '<meta property="og:type" content="website">\n<meta property="og:url" content="%s">\n'
       '<meta property="og:title" content="%s">\n<meta property="og:description" content="%s">\n')%(DESC,URL,URL,TITLE,DESC)
 doc=('<!doctype html>\n<html lang="zh-CN">\n<head>\n<meta charset="utf-8">\n'
