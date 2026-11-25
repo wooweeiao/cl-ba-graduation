@@ -3,9 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Early leaving and graduation rates of the Computational Linguistics BA at the University of Tübingen, by entry cohort. 图宾根计算语言学本科各入学届的中途离开与毕业比例。">
+<meta name="description" content="Early leaving and graduation rates of the Computational Linguistics BA at the University of Tübingen, by entry cohort and semester, from the university’s enrolment statistics. 图宾根大学计算语言学本科各入学届逐学期的中途离开与毕业比例。">
+<link rel="canonical" href="https://wooweeiao.github.io/cl-ba-graduation/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://wooweeiao.github.io/cl-ba-graduation/">
+<meta property="og:title" content="Tübingen Computational Linguistics BA: graduation rates · 图宾根大学计算语言学本科毕业率">
+<meta property="og:description" content="Early leaving and graduation rates of the Computational Linguistics BA at the University of Tübingen, by entry cohort and semester, from the university’s enrolment statistics. 图宾根大学计算语言学本科各入学届逐学期的中途离开与毕业比例。">
 <style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>图宾根 CL 本科毕业率</title>
+<title>Tübingen Computational Linguistics BA: graduation rates · 图宾根大学计算语言学本科毕业率</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <style>
 /* Layout: one filter row on top, then summary figures, two charts side by side, then the cohort × semester pivot table, then method notes. */
@@ -195,7 +200,7 @@ const DATA = {"academic_year":{"WS2016/17":[51,48,42,43,38,34,29,22,17,11,6,4],"
 
 /* ---------- strings: add an `en` block with the same keys to translate ---------- */
 const STR = { zh: {
-  title: '图宾根 CL 本科毕业率', filters: '筛选',
+  title: '图宾根大学计算语言学本科毕业率', filters: '筛选',
   h1:'图宾根计算语言学本科：中途离开与毕业',
   lede: '根据图宾根大学 WS 2016/17 – SS 2026 共 20 个学期的在读人数统计，追踪 Computational Linguistics 本科主修（Bachelor Hauptfach）各入学届的去向。读了不超过 5 个学期就离开的记为中途离开，读到第 6 学期及以后才离开的记为毕业。',
   caveat: '<b>这里的毕业率是按上述规则推算的，不是官方毕业数据。</b>这样划分是因为这个专业在前 5 个学期内毕业的人很少，读到第 6 学期以后没毕业就离开的人也很少，这两种误差可能大致相互抵消，这里不作进一步讨论。',
@@ -242,7 +247,7 @@ const STR = { zh: {
   ab_text3: '愿所有人都能走向自己喜欢的生活。',
   foot: '数据截至 SS 2026（采集日 2026-05-19）。只含本科主修；副修和硕士不在内。'
 }, en: {
-  title: 'Tübingen CL BA Graduation', filters: 'Filters',
+  title: 'Tübingen Computational Linguistics BA: graduation rates', filters: 'Filters',
   h1: 'Computational Linguistics BA at Tübingen: early leavers and graduates',
   lede: 'Based on the University of Tübingen’s enrolment statistics for 20 semesters (winter 2016/17 – summer 2026), this page follows each entry cohort of the Computational Linguistics bachelor’s major (Bachelor Hauptfach). Students who leave after one of the first 5 semesters are counted as leaving early; students who leave after semester 6 or later are counted as graduates.',
   caveat: '<b>The graduation rates here are estimated from that rule. They are not official graduation data.</b> The rule was chosen because few students in this programme graduate within the first 5 semesters and few leave without a degree from semester 6 onwards; these two errors may roughly cancel each other out, which is not examined further here.',
