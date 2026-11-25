@@ -123,6 +123,15 @@ tr.pool th, tr.pool td.n { border-top: 1px solid var(--axis); border-radius: 0; 
 .notes a:focus-visible { outline: 2px solid var(--grad); outline-offset: 2px; }
 footer { font-size: 12.5px; color: var(--muted); }
 
+/* centred text; table numbers stay right-aligned and the method list stays left-aligned */
+.wrap { text-align: center; }
+header p, header .about { margin-left: auto; margin-right: auto; }
+.filters { justify-content: center; }
+.field { align-items: center; }
+.chips, .legend, .tnotes { justify-content: center; }
+.cardhead { flex-direction: column; align-items: center; }
+.notes ul { text-align: left; margin-left: auto; margin-right: auto; }
+
 @media (max-width: 860px) {
   .grid2 { grid-template-columns: minmax(0, 1fr); }
   .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
