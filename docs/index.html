@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Early leaving and graduation rates of the Computational Linguistics BA at the University of Tübingen, by entry cohort. 图宾根计算语言学本科各入学届的中途离开与毕业比例。">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>图宾根 CL 本科毕业率</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: one filter row on top, then summary figures, two charts side by side, then the cohort × semester pivot table, then method notes. */
+:root {
+  --plane: #f9f9f7;
+  --surface: #fcfcfb;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #898781;
+  --grid: #e1e0d9;
+  --axis: #c3c2b7;
+  --ring: rgba(11,11,11,0.10);
+  --wash: rgba(11,11,11,0.05);
+  --grad: #2a78d6;   /* graduation series */
+  --drop: #eb6834;   /* early-leaving series */
+  --cohort-line: #a9a79f;
+  --note-bg: #f0efec;
+  --pink-bg: #fde7ee;
+  --pink-ring: #f2b6c9;
+  --font: system-ui, -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --plane: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10); --wash: rgba(255,255,255,0.06);
+    --grad: #3987e5; --drop: #d95926; --cohort-line: #6b6a65; --note-bg: #242422; --pink-bg: #3a1f2b; --pink-ring: #6e3a4f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --plane: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --ring: rgba(255,255,255,0.10); --wash: rgba(255,255,255,0.06);
+  --grad: #3987e5; --drop: #d95926; --cohort-line: #6b6a65; --note-bg: #242422; --pink-bg: #3a1f2b; --pink-ring: #6e3a4f;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--plane); color: var(--ink); font-family: var(--font);
+  font-size: 15px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 56px;
+}
+.wrap { max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+.langrow { display: flex; justify-content: flex-end; margin-bottom: 10px; }
+thead th:last-child { white-space: normal; min-width: 84px; }
+header h1 { font-size: 26px; line-height: 1.3; margin: 0 0 8px; font-weight: 650; text-wrap: balance; }
+header p { margin: 0; color: var(--ink-2); max-width: 46em; }
+header p + p { margin-top: 10px; }
+header p.about { color: var(--ink); font-size: 18px; line-height: 1.7; font-weight: 500; margin: 8px 0 14px; padding: 14px 18px; background: var(--pink-bg); border: 1px solid var(--pink-ring); border-radius: 10px; }
+.caveat b { color: var(--ink); font-weight: 600; }
+
+/* filter row */
+.filters { display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: flex-start; padding: 14px 16px; background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; }
+.field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.field > span { font-size: 12px; color: var(--muted); letter-spacing: 0.04em; }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--axis); border-radius: 8px; overflow: hidden; }
+.seg button { font: inherit; font-size: 13.5px; color: var(--ink-2); background: transparent; border: 0; padding: 6px 12px; cursor: pointer; border-right: 1px solid var(--axis); }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--surface); }
+.seg button:disabled { opacity: 0.4; cursor: not-allowed; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips button { font: inherit; font-size: 13px; font-variant-numeric: tabular-nums; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--axis); background: transparent; color: var(--muted); cursor: pointer; }
+.chips button[aria-pressed="true"] { background: var(--wash); color: var(--ink); border-color: var(--ink-2); }
+.chips button.link { border-color: transparent; color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; padding-inline: 6px; }
+button:focus-visible, [tabindex]:focus-visible { outline: 2px solid var(--grad); outline-offset: 2px; }
+
+/* summary figures */
+.tiles { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.tile { background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; padding: 14px 16px; min-width: 0; }
+.tile .lab { font-size: 13px; color: var(--ink-2); }
+.tile .val { font-size: 30px; font-weight: 650; line-height: 1.25; margin-top: 2px; }
+.tile .sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.tile .key { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; vertical-align: 1px; }
+
+/* cards */
+.grid2 { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 20px; }
+.card { background: var(--surface); border: 1px solid var(--ring); border-radius: 10px; padding: 16px 16px 12px; min-width: 0; }
+.card h2 { font-size: 16px; margin: 0; font-weight: 600; }
+.card .desc { font-size: 13px; color: var(--ink-2); margin: 2px 0 8px; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 12.5px; color: var(--ink-2); margin-bottom: 4px; }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+.legend i.line { height: 2px; width: 16px; vertical-align: 3px; border-radius: 1px; }
+.chart { width: 100%; }
+.chart svg { display: block; width: 100%; overflow: visible; }
+.chart text { font-family: var(--font); fill: var(--muted); font-size: 11.5px; font-variant-numeric: tabular-nums; }
+.chart text.v { fill: var(--ink-2); }
+.chart text.strong { fill: var(--ink); font-weight: 600; }
+.empty { color: var(--muted); padding: 40px 0; text-align: center; font-size: 14px; }
+
+/* pivot table */
+.cardhead { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: flex-end; justify-content: space-between; margin-bottom: 10px; }
+.scroll { overflow-x: auto; }
+table { border-collapse: separate; border-spacing: 2px; font-variant-numeric: tabular-nums; font-size: 13.5px; width: 100%; min-width: 760px; }
+th, td { padding: 6px 8px; text-align: right; white-space: nowrap; border-radius: 4px; }
+thead th { font-weight: 500; color: var(--ink-2); font-size: 12.5px; }
+thead th.grp { text-align: center; border-bottom: 2px solid var(--axis); border-radius: 0; color: var(--ink); }
+thead th.grp.d { border-bottom-color: var(--drop); }
+thead th.grp.g { border-bottom-color: var(--grad); }
+tbody th { text-align: left; font-weight: 500; position: sticky; left: 0; background: var(--surface); z-index: 1; }
+td.n { color: var(--ink-2); }
+td.cell { cursor: default; min-width: 52px; }
+td.na { color: var(--muted); text-align: center; }
+td.thin { color: var(--muted); font-style: italic; }
+tr.pool th, tr.pool td { font-weight: 650; }
+tr.pool th, tr.pool td.n { border-top: 1px solid var(--axis); border-radius: 0; }
+.tnotes { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 12.5px; color: var(--ink-2); margin-top: 10px; }
+
+/* tooltip */
+#tip { position: fixed; z-index: 20; pointer-events: none; background: var(--ink); color: var(--surface); font-size: 12.5px; line-height: 1.5; padding: 8px 10px; border-radius: 6px; max-width: 280px; font-variant-numeric: tabular-nums; }
+#tip b { font-weight: 600; }
+#tip .dim { opacity: 0.7; }
+
+/* notes */
+.notes h2 { font-size: 16px; margin: 0 0 8px; font-weight: 600; }
+.notes ul { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 8px; max-width: 50em; color: var(--ink-2); }
+.notes li b { color: var(--ink); font-weight: 600; }
+.notes p { margin: 0; max-width: 50em; color: var(--ink-2); }
+.notes a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+.notes a:focus-visible { outline: 2px solid var(--grad); outline-offset: 2px; }
+footer { font-size: 12.5px; color: var(--muted); }
+
+@media (max-width: 860px) {
+  .grid2 { grid-template-columns: minmax(0, 1fr); }
+  .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tile:last-child { grid-column: 1 / -1; }
+  header h1 { font-size: 22px; }
+  header p.about { font-size: 17px; }
+}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="langrow"><div class="seg" id="segLang"></div></div>
+    <h1 data-t="h1"></h1>
+    <p class="about" data-t="ab_text"></p>
+    <p data-t="lede"></p>
+    <p class="caveat" data-t="caveat"></p>
+  </header>
+
+  <section class="filters" aria-label="筛选">
+    <div class="field"><span data-t="f_def"></span><div class="seg" id="segDef"></div></div>
+    <div class="field"><span data-t="f_measure"></span><div class="seg" id="segMeasure"></div></div>
+    <div class="field" style="flex:1 1 320px"><span data-t="f_cohorts"></span><div class="chips" id="chips"></div></div>
+  </section>
+
+  <section class="tiles" id="tiles"></section>
+
+  <section class="grid2">
+    <div class="card">
+      <h2 data-t="a_title"></h2>
+      <div class="desc" id="aDesc"></div>
+      <div class="legend"><span><i style="background:var(--drop)"></i><span data-t="lg_drop"></span></span><span><i style="background:var(--grad)"></i><span data-t="lg_grad"></span></span></div>
+      <div class="chart" id="chartA"></div>
+    </div>
+    <div class="card">
+      <h2 data-t="b_title"></h2>
+      <div class="desc" data-t="b_desc"></div>
+      <div class="legend"><span><i class="line" style="background:var(--grad)"></i><span data-t="lg_pool"></span></span><span><i class="line" style="background:var(--cohort-line)"></i><span data-t="lg_single"></span></span></div>
+      <div class="chart" id="chartB"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="cardhead">
+      <div><h2 data-t="t_title"></h2><div class="desc" id="tDesc" style="margin-bottom:0"></div></div>
+      <div class="seg" id="segMode"></div>
+    </div>
+    <div class="scroll"><table id="pivot"></table></div>
+    <div class="tnotes"><span data-t="n_na"></span><span data-t="n_neg"></span><span data-t="n_thin"></span></div>
+  </section>
+
+  <section class="notes">
+    <h2 data-t="m_title"></h2>
+    <ul id="method"></ul>
+  </section>  <footer data-t="foot"></footer>
+</div>
+<div id="tip" hidden></div>
+
+<script>
+/* ---------- data: Bachelor Hauptfach head counts N_1..N_12 per entry cohort (null = not yet observed) ---------- */
+const DATA = {"academic_year":{"WS2016/17":[51,48,42,43,38,34,29,22,17,11,6,4],"WS2017/18":[35,32,25,25,20,15,14,10,4,2,1,1],"WS2018/19":[33,31,25,23,22,21,17,10,7,5,5,5],"WS2019/20":[38,39,27,22,21,21,17,11,8,8,5,4],"WS2020/21":[35,24,23,20,20,18,14,13,9,7,7,null],"WS2021/22":[41,33,29,26,26,27,19,14,13,null,null,null],"WS2022/23":[54,49,41,38,37,34,24,null,null,null,null,null],"WS2023/24":[54,51,45,41,38,null,null,null,null,null,null,null],"WS2024/25":[74,62,48,null,null,null,null,null,null,null,null,null],"WS2025/26":[54,null,null,null,null,null,null,null,null,null,null,null]},"ws_only":{"WS2016/17":[51,48,41,41,36,31,27,21,17,11,6,4],"WS2017/18":[35,30,24,24,19,15,12,9,3,2,1,1],"WS2018/19":[31,29,23,21,20,19,16,9,7,5,5,5],"WS2019/20":[38,34,22,18,17,16,14,9,6,6,4,3],"WS2020/21":[32,22,20,17,17,16,11,10,7,5,5,3],"WS2021/22":[40,33,29,26,26,26,18,13,12,9,null,null],"WS2022/23":[54,48,40,37,36,33,23,17,null,null,null,null],"WS2023/24":[54,50,45,40,36,29,null,null,null,null,null,null],"WS2024/25":[72,61,47,43,null,null,null,null,null,null,null,null],"WS2025/26":[54,48,null,null,null,null,null,null,null,null,null,null]}};
+
+/* ---------- strings: add an `en` block with the same keys to translate ---------- */
+const STR = { zh: {
+  title: '图宾根 CL 本科毕业率', filters: '筛选',
+  h1:'图宾根计算语言学本科：中途离开与毕业',
+  lede: '根据图宾根大学 WS 2016/17 – SS 2026 共 20 个学期的在读人数统计，追踪 Computational Linguistics 本科主修（Bachelor Hauptfach）各入学届的去向。读了不超过 5 个学期就离开的记为中途离开，读到第 6 学期及以后才离开的记为毕业。',
+  caveat: '<b>这里的毕业率是按上述规则推算的，不是官方毕业数据。</b>这样划分是因为这个专业在前 5 个学期内毕业的人很少，读到第 6 学期以后没毕业就离开的人也很少，这两种误差可能大致相互抵消，这里不作进一步讨论。',
+  f_def: '届的划分', def_ay: '学年届', def_ws: '仅冬季入学',
+  f_measure: '度量', m_ent: '占入学人数', m_haz: '占当学期在读人数', m_cnt: '人数',
+  f_cohorts: '入学届（合并时只算选中的）', all: '全选', none: '清空',
+  tile6: '6 学期毕业', tile7: '7 学期内毕业', tile8: '8 学期内毕业', tileFinal: '读到第 6 学期', tileDrop: '前 5 学期中途离开',
+  tileSubFinal: '按规则全部记为最终毕业', tileSubN: n => `${n} 届合并`, tileNone: '所选届尚未观测到',
+  tileUnit: '占入学人数',
+  a_title: '每个学期之后离开的人',
+  a_desc: { ent: '所选届合并，占入学人数的比例', haz: '所选届合并，占当学期在读人数的比例', cnt: '所选届合计人数（只含已观测到下一学期的届）' },
+  a_axis_d: '第 1–5 学期之后离开', a_axis_g: '第 6–11 学期之后离开',
+  lg_drop: '记为中途离开', lg_grad: '记为毕业',
+  b_title: '累计毕业率',
+  b_desc: '占入学人数；横轴是读了几个学期。单届的线画到最后一个已观测学期为止。',
+  lg_pool: '所选届合并', lg_single: '单届',
+  b_axis: '学期内毕业',
+  t_title: '入学届 × 学期',
+  t_desc: { per: '每格是在该学期之后离开的人', cum: '每格是到该学期为止累计离开的人（中途离开和毕业分别累计）' },
+  mode_per: '逐学期', mode_cum: '累计',
+  th_cohort: '入学届', th_n: '入学人数', th_d: '中途离开：在第几学期之后', th_g: '毕业：在第几学期之后', th_still: '第 12 学期仍在读',
+  pool: '合并', sum: '合计',
+  n_na: '— 尚未观测到', n_neg: '† 负数：转入或休学返回的人多于离开的人', n_thin: '灰色斜体：当学期在读不足 10 人',
+  empty: '请至少选择一个入学届',
+  tip_after: k => `第 ${k} 学期之后`, tip_upto: k => `到第 ${k} 学期为止`,
+  tip_left: (a, b, c) => `离开 ${a} 人（在读 ${b} → ${c}）`,
+  tip_ent: 'of entrants', tip_shareEnt: v => `占入学人数 ${v}`, tip_shareHaz: v => `占当学期在读 ${v}`,
+  tip_cohorts: (n, a) => `${n} 届合并，当学期在读共 ${a} 人`,
+  tip_cumD: (a, n) => `累计中途离开 ${a} 人 / 入学 ${n} 人`, tip_cumG: (a, n) => `累计毕业 ${a} 人 / 入学 ${n} 人`,
+  tip_sem: k => `${k} 学期内毕业`, tip_cohort: c => `${c} 届`,
+  m_title: '口径与局限',
+  method: [
+    '<b>数据来源</b>：Universität Tübingen 每学期公布的 <a href="https://uni-tuebingen.de/en/einrichtungen/verwaltung/iv-studierende/studierendenabteilung/statistiken/" target="_blank" rel="noopener">Studierendenstatistik</a>，表「Studienfachbelegung nach Abschlusszielen」，WS 2016/17 – SS 2026。专业代码 160、161、162 是同一项目的不同考试条例版本，这里把三者的 Bachelor Hauptfach 人数相加。',
+    '<b>怎么追踪</b>：统计只给出每学期各 Fachsemester 的在读人数，没有个人记录。某届第 k 学期的人数减去下一学期第 k+1 学期的人数，就是第 k 学期之后离开的人数。',
+    '<b>届的划分</b>：「学年届」把冬季入学的人和次年夏季入学的人算作一届，学期数落后一学期的人仍留在本届；「仅冬季入学」只看冬季那条线，落后一学期的人会被算成中途离开，结果略低。',
+    '<b>毕业是推算的</b>：第 6 学期起离开的人全部记为毕业，所以「读到第 6 学期」的比例就是这里的最终毕业率。前 5 个学期内毕业的人会被错记为中途离开，第 6 学期起没毕业就离开的人会被错记为毕业；两类人都很少，方向相反，可能大致相互抵消。',
+    '<b>合并</b>：每个学期的离开比例只用已经观测到下一学期的届，把人数相加后再算；占入学人数的比例由各学期比例连乘得到。较新的届只贡献前几个学期。',
+    '<b>负数</b>：转专业进来、休学后返回的人会让某学期的人数比上一学期还多，照实显示，没有截成 0。',
+    '<b>样本小</b>：每届 30–70 人，单届的数字波动很大，悬停可以看到具体人数。第 12 学期之后无法再追踪，因为统计里「12 学期以上」是所有届混在一起的。'
+  ],
+  ab_title: '关于这个页面',
+  ab_text: '我是这个专业的在读学生。做这个统计，是因为想知道学生总体上在哪个时间点做出继续或离开的决定。这里的数字不是对专业质量的评价，也不能用来预测某一个人的情况。希望它对正在考虑或正在读这个专业的同学有一点参考价值。',
+  foot: '数据截至 SS 2026（采集日 2026-05-19）。只含本科主修；副修和硕士不在内。'
+}, en: {
+  title: 'Tübingen CL BA Graduation', filters: 'Filters',
+  h1: 'Computational Linguistics BA at Tübingen: early leavers and graduates',
+  lede: 'Based on the University of Tübingen’s enrolment statistics for 20 semesters (winter 2016/17 – summer 2026), this page follows each entry cohort of the Computational Linguistics bachelor’s major (Bachelor Hauptfach). Students who leave after one of the first 5 semesters are counted as leaving early; students who leave after semester 6 or later are counted as graduates.',
+  caveat: '<b>The graduation rates here are estimated from that rule. They are not official graduation data.</b> The rule was chosen because few students in this programme graduate within the first 5 semesters and few leave without a degree from semester 6 onwards; these two errors may roughly cancel each other out, which is not examined further here.',
+  f_def: 'Cohort definition', def_ay: 'Academic year', def_ws: 'Winter entry only',
+  f_measure: 'Measure', m_ent: '% of entrants', m_haz: '% of enrolled that semester', m_cnt: 'Head count',
+  f_cohorts: 'Entry cohorts (pooled figures use the selected ones)', all: 'Select all', none: 'Clear',
+  tile6: 'Graduated in 6 semesters', tile7: 'Within 7 semesters', tile8: 'Within 8 semesters', tileFinal: 'Reached semester 6', tileDrop: 'Left early, in semesters 1–5',
+  tileSubFinal: 'All counted as eventual graduates', tileSubN: n => `${n} ${n === 1 ? 'cohort' : 'cohorts'} pooled`, tileNone: 'Not yet observed for the selected cohorts',
+  tileUnit: 'of entrants',
+  a_title: 'Students leaving after each semester',
+  a_desc: { ent: 'Selected cohorts pooled, as a share of entrants', haz: 'Selected cohorts pooled, as a share of students enrolled that semester', cnt: 'Total head count across the selected cohorts (only cohorts whose next semester is observed)' },
+  a_axis_d: 'Left after semesters 1–5', a_axis_g: 'Left after semesters 6–11',
+  lg_drop: 'Counted as leaving early', lg_grad: 'Counted as graduation',
+  b_title: 'Cumulative graduation rate',
+  b_desc: 'Share of entrants; the horizontal axis is the number of semesters studied. Each cohort’s line stops at its last observed semester.',
+  lg_pool: 'Selected cohorts pooled', lg_single: 'Single cohort',
+  b_axis: 'Graduated within this many semesters',
+  t_title: 'Entry cohort × semester',
+  t_desc: { per: 'Each cell shows the students who left after that semester', cum: 'Each cell shows the students who had left by that semester (early leavers and graduates accumulate separately)' },
+  mode_per: 'Per semester', mode_cum: 'Cumulative',
+  th_cohort: 'Cohort', th_n: 'Entrants', th_d: 'Left early: after semester', th_g: 'Graduated: after semester', th_still: 'Still enrolled in semester 12',
+  pool: 'Pooled', sum: 'Total',
+  n_na: '— not yet observed', n_neg: '† negative: more students joined or returned than left', n_thin: 'Grey italics: fewer than 10 students enrolled that semester',
+  empty: 'Select at least one entry cohort',
+  tip_after: k => `After semester ${k}`, tip_upto: k => `Up to semester ${k}`,
+  tip_left: (a, b, c) => `${a} left (enrolled ${b} → ${c})`,
+  tip_shareEnt: v => `${v} of entrants`, tip_shareHaz: v => `${v} of students enrolled that semester`,
+  tip_cohorts: (n, a) => `${n} ${n === 1 ? 'cohort' : 'cohorts'} pooled, ${a} enrolled that semester`,
+  tip_cumD: (a, n) => `${a} left early so far / ${n} entrants`, tip_cumG: (a, n) => `${a} graduated so far / ${n} entrants`,
+  tip_sem: k => `Graduated within ${k} semesters`, tip_cohort: c => `${c} cohort`,
+  m_title: 'Method and limitations',
+  method: [
+    '<b>Source</b>: the <a href="https://uni-tuebingen.de/en/einrichtungen/verwaltung/iv-studierende/studierendenabteilung/statistiken/" target="_blank" rel="noopener">Studierendenstatistik</a> published each semester by Universität Tübingen, table “Studienfachbelegung nach Abschlusszielen”, winter 2016/17 – summer 2026. Subject codes 160, 161 and 162 are versions of the same programme under different exam regulations; their Bachelor Hauptfach counts are added together.',
+    '<b>Tracking</b>: the statistics give the number of students enrolled in each Fachsemester every semester, with no individual records. A cohort’s count in semester k minus its count in semester k+1 one semester later is the number who left after semester k.',
+    '<b>Cohort definition</b>: “Academic year” treats winter entrants and the following summer’s entrants as one cohort, so students who fall one semester behind stay in their cohort. “Winter entry only” follows the winter line alone; students who fall one semester behind are then counted as leaving early, and the results come out slightly lower.',
+    '<b>Graduation is estimated</b>: everyone who leaves after semester 6 or later is counted as a graduate, so the share that reached semester 6 is the eventual graduation rate used here. Students who graduate within the first 5 semesters are miscounted as leaving early, and students who leave without a degree from semester 6 onwards are miscounted as graduates; both groups are small and the errors point in opposite directions, so they may roughly cancel out.',
+    '<b>Pooling</b>: for each semester, the leaving rate uses only cohorts whose next semester has been observed, with head counts added before dividing. Shares of entrants are the product of those per-semester rates. Recent cohorts contribute to the early semesters only.',
+    '<b>Negative values</b>: students who transfer in or return from leave can make a semester’s count higher than the one before. These are shown as they are and are not clipped to zero.',
+    '<b>Small samples</b>: each cohort has 30–70 students, so single-cohort figures vary a lot; hover over a cell to see the head counts. Nothing can be tracked beyond semester 12, because the statistics lump all cohorts together above that.'
+  ],
+  ab_title: 'About this page',
+  ab_text: 'I am a student in this programme. I put these figures together because I wanted to know at which point students, taken as a whole, decide to stay or to leave. The numbers are not a judgement on the quality of the programme, and they cannot predict what will happen to any one person. I hope they are a useful reference for students who are considering the programme or already in it.',
+  foot: 'Data up to summer semester 2026 (collected 19 May 2026). Bachelor major only; minor and master’s students are not included.'
+} };
+function pickLang() {
+  const h = location.hash.replace('#', '');
+  if (STR[h]) return h;
+  try { const s = localStorage.getItem('lang'); if (STR[s]) return s; } catch (e) {}
+  return (navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en';
+}
+let LANG = pickLang();
+let T = STR[LANG];
+
+/* ---------- state ---------- */
+const state = { def: 'academic_year', measure: 'ent', mode: 'per', sel: null };
+const KS = [1,2,3,4,5,6,7,8,9,10,11];
+const label = c => c.replace('WS', '');
+const pct = v => (v * 100).toFixed(1) + '%';
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
+
+/* ---------- computation ---------- */
+function pooled(cohorts) {
+  // life table over the given cohorts; index k = Fachsemester (1..11)
+  const out = { h: {}, share: {}, before: {}, risk: {}, left: {}, n: {}, still: null };
+  let S = 1, ok = true;
+  for (const k of KS) {
+    const use = cohorts.filter(N => N[k] != null);
+    const a = use.reduce((s, N) => s + N[k-1], 0), b = use.reduce((s, N) => s + N[k], 0);
+    if (!ok || !use.length || a === 0) { ok = false; continue; }
+    const h = (a - b) / a;
+    out.h[k] = h; out.share[k] = S * h; out.before[k] = S; out.risk[k] = a; out.left[k] = a - b; out.n[k] = use.length;
+    S *= 1 - h;
+  }
+  if (ok) out.still = S;
+  return out;
+}
+const isDrop = k => k <= 5;
+function cellValue(N, k, measure, mode) {
+  // one cohort, one Fachsemester; null = not observed
+  if (N[k] == null) return null;
+  if (mode === 'cum') {
+    if (!isDrop(k) && N[5] == null) return null;
+    const lost = isDrop(k) ? N[0] - N[k] : N[5] - N[k];
+    return measure === 'cnt' ? lost : lost / N[0];
+  }
+  const left = N[k-1] - N[k];
+  if (measure === 'cnt') return left;
+  return measure === 'haz' ? (N[k-1] ? left / N[k-1] : null) : left / N[0];
+}
+function pooledValue(P, k, measure, mode, cohorts) {
+  if (measure === 'cnt') {
+    const use = cohorts.filter(N => cellValue(N, k, 'cnt', mode) != null);
+    return use.length ? use.reduce((s, N) => s + cellValue(N, k, 'cnt', mode), 0) : null;
+  }
+  if (P.share[k] == null) return null;
+  if (mode === 'cum') {
+    let s = 0;
+    for (let j = isDrop(k) ? 1 : 6; j <= k; j++) s += P.share[j];
+    return s;
+  }
+  return measure === 'haz' ? P.h[k] : P.share[k];
+}
+
+/* ---------- controls ---------- */
+function seg(el, options, get, set) {
+  el.innerHTML = options.map(o => `<button type="button" id="${el.id}-${o.v}" data-v="${o.v}"></button>`).join('');
+  el.addEventListener('click', e => { const b = e.target.closest('button'); if (b && !b.disabled) { set(b.dataset.v); render(); } });
+  el._sync = () => el.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.v === get())));
+  el._label = () => el.querySelectorAll('button').forEach((b, i) => { b.textContent = options[i].raw || T[options[i].k]; });
+}
+function applyLang() {
+  T = STR[LANG];
+  document.documentElement.lang = LANG === 'zh' ? 'zh-CN' : 'en';
+  document.title = T.title;
+  document.querySelectorAll('[data-t]').forEach(el => { el.innerHTML = T[el.dataset.t]; });
+  document.getElementById('method').innerHTML = T.method.map(m => `<li>${m}</li>`).join('');
+  document.querySelector('.filters').setAttribute('aria-label', T.filters);
+  ['segLang', 'segDef', 'segMeasure', 'segMode'].forEach(id => document.getElementById(id)._label());
+  document.getElementById('chip-all').textContent = T.all;
+  document.getElementById('chip-none').textContent = T.none;
+}
+function setLang(v) {
+  LANG = v;
+  try { localStorage.setItem('lang', v); } catch (e) {}
+  try { location.hash = v; } catch (e) {}
+  applyLang();
+}
+function buildControls() {
+  seg(document.getElementById('segLang'), [{ v: 'zh', raw: '中文' }, { v: 'en', raw: 'English' }], () => LANG, setLang);
+  seg(document.getElementById('segDef'), [{ v: 'academic_year', k: 'def_ay' }, { v: 'ws_only', k: 'def_ws' }], () => state.def, v => { state.def = v; });
+  seg(document.getElementById('segMeasure'), [{ v: 'ent', k: 'm_ent' }, { v: 'haz', k: 'm_haz' }, { v: 'cnt', k: 'm_cnt' }], () => state.measure, v => { state.measure = v; if (v === 'haz') state.mode = 'per'; });
+  seg(document.getElementById('segMode'), [{ v: 'per', k: 'mode_per' }, { v: 'cum', k: 'mode_cum' }], () => state.mode, v => { state.mode = v; });
+  const names = Object.keys(DATA.academic_year);
+  state.sel = new Set(names);
+  const chips = document.getElementById('chips');
+  chips.innerHTML = names.map((c, i) => `<button type="button" id="chip-${i}" data-c="${c}">${label(c)}</button>`).join('') +
+    `<button type="button" class="link" id="chip-all" data-all="1">${T.all}</button><button type="button" class="link" id="chip-none" data-none="1">${T.none}</button>`;
+  chips.addEventListener('click', e => {
+    const b = e.target.closest('button'); if (!b) return;
+    if (b.dataset.all) state.sel = new Set(names);
+    else if (b.dataset.none) state.sel = new Set();
+    else state.sel.has(b.dataset.c) ? state.sel.delete(b.dataset.c) : state.sel.add(b.dataset.c);
+    render();
+  });
+  applyLang();
+  addEventListener('hashchange', () => { const h = location.hash.replace('#', ''); if (STR[h] && h !== LANG) { LANG = h; applyLang(); render(); } });
+}
+
+/* ---------- tooltip ---------- */
+const tip = document.getElementById('tip');
+function showTip(html, x, y) {
+  tip.innerHTML = html; tip.hidden = false;
+  const r = tip.getBoundingClientRect();
+  let left = x + 14, top = y + 14;
+  if (left + r.width > innerWidth - 8) left = Math.max(8, x - r.width - 14);
+  if (top + r.height > innerHeight - 8) top = Math.max(8, y - r.height - 14);
+  tip.style.left = left + 'px'; tip.style.top = top + 'px';
+}
+function hideTip() { tip.hidden = true; }
+function bindTips(root) {
+  root.querySelectorAll('[data-tip]').forEach(el => {
+    el.addEventListener('pointermove', e => showTip(el.dataset.tip, e.clientX, e.clientY));
+    el.addEventListener('pointerleave', hideTip);
+    el.addEventListener('focus', () => { const r = el.getBoundingClientRect(); showTip(el.dataset.tip, r.left + r.width / 2, r.top); });
+    el.addEventListener('blur', hideTip);
+  });
+}
+const attr = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+
+/* ---------- render ---------- */
+function current() {
+  const all = DATA[state.def];
+  const names = Object.keys(all).filter(c => state.sel.has(c));
+  return { all, names, cohorts: names.map(c => all[c]) };
+}
+function render() {
+  ['segLang', 'segDef', 'segMeasure', 'segMode'].forEach(id => document.getElementById(id)._sync());
+  document.getElementById('segMode-cum').disabled = state.measure === 'haz';
+  document.querySelectorAll('#chips button[data-c]').forEach(b => b.setAttribute('aria-pressed', String(state.sel.has(b.dataset.c))));
+  const cur = current(), P = pooled(cur.cohorts);
+  renderTiles(cur, P); renderChartA(cur, P); renderChartB(cur, P); renderTable(cur, P);
+  hideTip();
+}
+
+function renderTiles(cur, P) {
+  const cum = m => { if (P.share[m] == null) return null; let s = 0; for (let j = 6; j <= m; j++) s += P.share[j]; return s; };
+  const reach = P.before[6] != null ? P.before[6] : null;
+  const items = [
+    { lab: T.tile6, v: cum(6), n: P.n[6], key: 'grad' },
+    { lab: T.tile7, v: cum(7), n: P.n[7], key: 'grad' },
+    { lab: T.tile8, v: cum(8), n: P.n[8], key: 'grad' },
+    { lab: T.tileFinal, v: reach, sub: T.tileSubFinal, key: 'grad' },
+    { lab: T.tileDrop, v: reach == null ? null : 1 - reach, n: P.n[5], key: 'drop' }
+  ];
+  document.getElementById('tiles').innerHTML = items.map(it => `<div class="tile"><div class="lab"><i class="key" style="background:var(--${it.key})"></i>${it.lab}</div>
+    <div class="val">${it.v == null ? '—' : pct(it.v)}</div>
+    <div class="sub">${it.v == null ? T.tileNone : (it.sub || `${T.tileUnit} · ${T.tileSubN(it.n)}`)}</div></div>`).join('');
+}
+
+function niceMax(v) { const steps = [0.05, 0.1, 0.2, 0.25, 0.5, 1, 2, 5, 10, 20, 25, 50, 100, 200]; for (const s of steps) if (v <= s * 4) return { step: s, max: Math.ceil(v / s - 1e-9) * s }; return { step: v / 4, max: v }; }
+
+function renderChartA(cur, P) {
+  const box = document.getElementById('chartA');
+  document.getElementById('aDesc').textContent = T.a_desc[state.measure];
+  if (!cur.cohorts.length) { box.innerHTML = `<div class="empty">${T.empty}</div>`; return; }
+  const m = state.measure, vals = KS.map(k => pooledValue(P, k, m, 'per', cur.cohorts));
+  const fmt = v => m === 'cnt' ? String(v) : pct(v);
+  const W = Math.max(300, box.clientWidth), H = 300, L = 40, R = 8, TOP = 22, B = 58;
+  const hi = Math.max(...vals.filter(v => v != null), m === 'cnt' ? 1 : 0.01), lo = Math.min(0, ...vals.filter(v => v != null));
+  const nm = niceMax(hi * 1.12), nlo = lo < 0 ? -Math.ceil(-lo / nm.step) * nm.step : 0;
+  const y = v => TOP + (nm.max - v) / (nm.max - nlo) * (H - TOP - B);
+  const bw = (W - L - R) / KS.length, w = Math.min(38, bw * 0.62);
+  let s = `<svg viewBox="0 0 ${W} ${H}" height="${H}" role="img" aria-label="${attr(T.a_title)}">`;
+  for (let v = nlo; v <= nm.max + 1e-9; v += nm.step) {
+    s += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="${Math.abs(v) < 1e-9 ? 'var(--axis)' : 'var(--grid)'}" stroke-width="1"/>`;
+    s += `<text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${m === 'cnt' ? Math.round(v) : Math.round(v * 100) + '%'}</text>`;
+  }
+  KS.forEach((k, i) => {
+    const cx = L + bw * (i + 0.5), v = vals[i];
+    s += `<text x="${cx}" y="${H - B + 16}" text-anchor="middle">${k}</text>`;
+    if (v == null) { s += `<text x="${cx}" y="${y(0) - 6}" text-anchor="middle">—</text>`; return; }
+    const x0 = cx - w / 2, y0 = y(0), y1 = y(v), r = Math.min(4, Math.abs(y1 - y0), w / 2), d = v >= 0 ? 1 : -1;
+    const path = `M${x0},${y0}L${x0},${y1 + d * r}Q${x0},${y1} ${x0 + r},${y1}L${x0 + w - r},${y1}Q${x0 + w},${y1} ${x0 + w},${y1 + d * r}L${x0 + w},${y0}Z`;
+    s += `<path d="${path}" fill="var(--${isDrop(k) ? 'drop' : 'grad'})"/>`;
+    s += `<text class="v" x="${cx}" y="${v >= 0 ? y1 - 6 : y1 + 14}" text-anchor="middle">${W < 440 && m !== 'cnt' ? (v * 100).toFixed(0) : fmt(v)}</text>`;
+    const tipHtml = `<b>${T.tip_after(k)}</b> · ${isDrop(k) ? T.lg_drop : T.lg_grad}<br>` +
+      (m === 'cnt' ? `${fmt(v)}` : `${T.tip_shareEnt(pct(P.share[k]))}<br>${T.tip_shareHaz(pct(P.h[k]))}`) +
+      (P.n[k] ? `<br><span class="dim">${T.tip_cohorts(P.n[k], P.risk[k])}</span>` : '');
+    s += `<rect x="${cx - bw / 2}" y="${TOP}" width="${bw}" height="${H - TOP - B}" fill="transparent" tabindex="0" data-tip="${attr(tipHtml)}"/>`;
+  });
+  // group brackets
+  const gx = (a, b) => [L + bw * (a - 1) + 6, L + bw * b - 6];
+  [[1, 5, 'drop', T.a_axis_d], [6, 11, 'grad', T.a_axis_g]].forEach(([a, b, key, txt]) => {
+    const [xa, xb] = gx(a, b);
+    s += `<line x1="${xa}" x2="${xb}" y1="${H - B + 28}" y2="${H - B + 28}" stroke="var(--${key})" stroke-width="2" stroke-linecap="round"/>`;
+    s += `<text class="v" x="${(xa + xb) / 2}" y="${H - B + 46}" text-anchor="middle">${txt}</text>`;
+  });
+  box.innerHTML = s + '</svg>'; bindTips(box);
+}
+
+function renderChartB(cur, P) {
+  const box = document.getElementById('chartB');
+  if (!cur.cohorts.length) { box.innerHTML = `<div class="empty">${T.empty}</div>`; return; }
+  const XS = [6, 7, 8, 9, 10, 11];
+  const series = cur.names.map((c, i) => ({ name: c, pts: XS.filter(k => cur.cohorts[i][5] != null && cur.cohorts[i][k] != null).map(k => ({ k, v: (cur.cohorts[i][5] - cur.cohorts[i][k]) / cur.cohorts[i][0], a: cur.cohorts[i][5] - cur.cohorts[i][k], n: cur.cohorts[i][0] })) })).filter(s => s.pts.length);
+  let acc = 0; const pool = [];
+  for (const k of XS) { if (P.share[k] == null) break; acc += P.share[k]; pool.push({ k, v: acc }); }
+  if (!pool.length) { box.innerHTML = `<div class="empty">${T.tileNone}</div>`; return; }
+  const W = Math.max(300, box.clientWidth), H = 300, L = 40, R = 50, TOP = 22, B = 40;
+  const all = pool.map(p => p.v).concat(...series.map(s => s.pts.map(p => p.v)));
+  const nm = niceMax(Math.max(...all, 0.05) * 1.08);
+  const x = k => L + (k - 6) / 5 * (W - L - R), y = v => TOP + (nm.max - v) / nm.max * (H - TOP - B);
+  let s = `<svg viewBox="0 0 ${W} ${H}" height="${H}" role="img" aria-label="${attr(T.b_title)}">`;
+  for (let v = 0; v <= nm.max + 1e-9; v += nm.step) {
+    s += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="${v === 0 ? 'var(--axis)' : 'var(--grid)'}" stroke-width="1"/>`;
+    s += `<text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${Math.round(v * 100)}%</text>`;
+  }
+  XS.forEach(k => { s += `<text x="${x(k)}" y="${H - B + 16}" text-anchor="middle">${k}</text>`; });
+  s += `<text class="v" x="${(L + W - R) / 2}" y="${H - 4}" text-anchor="middle">${T.b_axis}</text>`;
+  const line = pts => pts.map((p, i) => `${i ? 'L' : 'M'}${x(p.k).toFixed(1)},${y(p.v).toFixed(1)}`).join('');
+  const single = series.length === 1;
+  const points = [];
+  series.forEach(sr => {
+    s += `<path d="${line(sr.pts)}" fill="none" stroke="var(--cohort-line)" stroke-width="1.5" stroke-linejoin="round"/>`;
+    sr.pts.forEach(p => { s += `<circle cx="${x(p.k)}" cy="${y(p.v)}" r="2.5" fill="var(--cohort-line)"/>`; points.push({ x: x(p.k), y: y(p.v), html: `<b>${T.tip_cohort(label(sr.name))}</b> · ${T.tip_sem(p.k)}<br>${pct(p.v)}<br><span class="dim">${T.tip_cumG(p.a, p.n)}</span>` }); });
+  });
+  s += `<path d="${line(pool)}" fill="none" stroke="var(--grad)" stroke-width="2" stroke-linejoin="round"/>`;
+  pool.forEach(p => { s += `<circle cx="${x(p.k)}" cy="${y(p.v)}" r="4" fill="var(--grad)" stroke="var(--surface)" stroke-width="2"/>`; points.push({ x: x(p.k), y: y(p.v), html: `<b>${T.lg_pool}</b> · ${T.tip_sem(p.k)}<br>${pct(p.v)}<br><span class="dim">${T.tileSubN(P.n[p.k])}</span>` }); });
+  // end labels: cohort names at each line's last point, pooled value at its end; nudge apart per x
+  const labels = series.map(sr => { const p = sr.pts[sr.pts.length - 1]; return { k: p.k, y: y(p.v), t: label(sr.name), cls: '' }; });
+  const pe = pool[pool.length - 1]; labels.push({ k: pe.k, y: y(pe.v), t: pct(pe.v), cls: 'strong' });
+  const byK = {}; labels.forEach(l => (byK[l.k] = byK[l.k] || []).push(l));
+  Object.values(byK).forEach(g => { g.sort((a, b) => a.y - b.y); for (let i = 1; i < g.length; i++) if (g[i].y - g[i-1].y < 13) g[i].y = g[i-1].y + 13; });
+  labels.forEach(l => { s += `<text class="${l.cls || 'v'}" x="${x(l.k) + 8}" y="${l.y + 4}">${l.t}</text>`; });
+  s += `<rect id="hitB" x="${L - 10}" y="${TOP - 10}" width="${W - L - R + 20}" height="${H - TOP - B + 20}" fill="transparent"/><circle id="hoverB" r="6" fill="none" stroke="var(--ink)" stroke-width="1.5" visibility="hidden"/>`;
+  box.innerHTML = s + '</svg>';
+  const svg = box.querySelector('svg'), hov = box.querySelector('#hoverB');
+  svg.addEventListener('pointermove', e => {
+    const r = svg.getBoundingClientRect(), px = (e.clientX - r.left) * W / r.width, py = (e.clientY - r.top) * H / r.height;
+    let best = null, bd = 1e9; points.forEach(p => { const d = (p.x - px) ** 2 + (p.y - py) ** 2; if (d < bd) { bd = d; best = p; } });
+    if (!best || bd > 60 * 60) { hov.setAttribute('visibility', 'hidden'); hideTip(); return; }
+    hov.setAttribute('cx', best.x); hov.setAttribute('cy', best.y); hov.setAttribute('visibility', 'visible'); showTip(best.html, e.clientX, e.clientY);
+  });
+  svg.addEventListener('pointerleave', () => { hov.setAttribute('visibility', 'hidden'); hideTip(); });
+}
+
+function renderTable(cur, P) {
+  const m = state.measure, mode = state.mode, tbl = document.getElementById('pivot');
+  document.getElementById('tDesc').textContent = T.t_desc[mode];
+  if (!cur.cohorts.length) { tbl.innerHTML = `<tbody><tr><td class="na">${T.empty}</td></tr></tbody>`; return; }
+  const fmt = v => m === 'cnt' ? String(v) : pct(v);
+  const rows = cur.cohorts.map(N => KS.map(k => cellValue(N, k, m, mode)));
+  const prow = KS.map(k => pooledValue(P, k, m, mode, cur.cohorts));
+  const ratioMax = Math.max(0.0001, ...rows.flat().concat(m === 'cnt' ? [] : prow).filter(v => v != null));
+  const shade = (v, k, max) => v == null || v <= 0 ? '' : `background:color-mix(in oklab, var(--${isDrop(k) ? 'drop' : 'grad'}) ${(6 + 44 * Math.min(1, v / max)).toFixed(0)}%, var(--surface))`;
+  let h = `<thead><tr><th></th><th></th><th class="grp d" colspan="5">${T.th_d}</th><th class="grp g" colspan="6">${T.th_g}</th><th></th></tr>`;
+  h += `<tr><th style="text-align:left">${T.th_cohort}</th><th>${T.th_n}</th>${KS.map(k => `<th>${k}</th>`).join('')}<th>${T.th_still}</th></tr></thead><tbody>`;
+  cur.names.forEach((c, i) => {
+    const N = cur.cohorts[i];
+    h += `<tr><th scope="row">${label(c)}</th><td class="n">${N[0]}</td>`;
+    KS.forEach((k, j) => {
+      const v = rows[i][j];
+      if (v == null) { h += '<td class="na">—</td>'; return; }
+      const left = N[k-1] - N[k];
+      let tipHtml = `<b>${T.tip_cohort(label(c))}</b> · ${mode === 'cum' ? T.tip_upto(k) : T.tip_after(k)}<br>`;
+      if (mode === 'cum') { const lost = isDrop(k) ? N[0] - N[k] : N[5] - N[k]; tipHtml += `${isDrop(k) ? T.tip_cumD(lost, N[0]) : T.tip_cumG(lost, N[0])}<br>${T.tip_shareEnt(pct(lost / N[0]))}`; }
+      else tipHtml += `${T.tip_left(left, N[k-1], N[k])}<br>${T.tip_shareEnt(pct(left / N[0]))}<br>${T.tip_shareHaz(pct(left / N[k-1]))}`;
+      const thin = m === 'haz' && N[k-1] < 10;
+      h += `<td class="cell${thin ? ' thin' : ''}" style="${shade(v, k, ratioMax)}" data-tip="${attr(tipHtml)}">${fmt(v)}${v < 0 ? ' †' : ''}</td>`;
+    });
+    const still = N[11];
+    h += (still == null ? '<td class="na">—</td>' : `<td class="n">${m === 'cnt' ? still : pct(still / N[0])}</td>`) + '</tr>';
+  });
+  const nEntry = cur.cohorts.reduce((s, N) => s + N[0], 0);
+  h += `<tr class="pool"><th scope="row">${m === 'cnt' ? T.sum : T.pool}</th><td class="n">${nEntry}</td>`;
+  const poolMax = m === 'cnt' ? Math.max(1, ...prow.filter(v => v != null)) : ratioMax;
+  KS.forEach((k, j) => {
+    const v = prow[j];
+    if (v == null) { h += '<td class="na">—</td>'; return; }
+    const tipHtml = `<b>${m === 'cnt' ? T.sum : T.pool}</b> · ${mode === 'cum' ? T.tip_upto(k) : T.tip_after(k)}<br>${fmt(v)}` + (P.n[k] ? `<br><span class="dim">${T.tip_cohorts(P.n[k], P.risk[k])}</span>` : '');
+    h += `<td class="cell" style="${shade(v, k, poolMax)}" data-tip="${attr(tipHtml)}">${fmt(v)}${v < 0 ? ' †' : ''}</td>`;
+  });
+  const stillN = cur.cohorts.filter(N => N[11] != null).reduce((s, N) => s + N[11], 0);
+  h += (m === 'cnt' ? `<td class="n">${stillN}</td>` : (P.still == null ? '<td class="na">—</td>' : `<td class="n">${pct(P.still)}</td>`)) + '</tr></tbody>';
+  tbl.innerHTML = h; bindTips(tbl);
+}
+
+/* ---------- boot ---------- */
+buildControls();
+render();
+let raf = 0;
+new ResizeObserver(() => { cancelAnimationFrame(raf); raf = requestAnimationFrame(() => { const cur = current(), P = pooled(cur.cohorts); renderChartA(cur, P); renderChartB(cur, P); }); }).observe(document.querySelector('.wrap'));
+</script>
+</body>
+</html>

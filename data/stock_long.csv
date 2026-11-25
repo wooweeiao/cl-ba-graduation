@@ -1,0 +1,792 @@
+semester,sem_index,fachschluessel,fach,abschluss,hf_nf,fachsemester,count
+WS2016/17,1,161,Computational Linguistics,Bachelor,HF,2,2
+WS2016/17,1,161,Computational Linguistics,Bachelor,HF,3,32
+WS2016/17,1,161,Computational Linguistics,Bachelor,HF,4,1
+WS2016/17,1,161,Computational Linguistics,Bachelor,HF,5,27
+WS2016/17,1,161,Computational Linguistics,Bachelor,HF,8,1
+WS2016/17,1,160,Computerlinguistik,Bachelor,HF,3,1
+WS2016/17,1,160,Computerlinguistik,Bachelor,HF,6,1
+WS2016/17,1,160,Computerlinguistik,Bachelor,HF,7,8
+WS2016/17,1,160,Computerlinguistik,Bachelor,HF,9,3
+WS2016/17,1,160,Computerlinguistik,Bachelor,HF,10,2
+WS2016/17,1,160,Computerlinguistik,Bachelor,HF,11,1
+WS2016/17,1,160,Computerlinguistik,Bachelor,NF,2,3
+WS2016/17,1,160,Computerlinguistik,Bachelor,NF,3,10
+WS2016/17,1,160,Computerlinguistik,Bachelor,NF,4,4
+WS2016/17,1,160,Computerlinguistik,Bachelor,NF,5,10
+WS2016/17,1,160,Computerlinguistik,Bachelor,NF,6,2
+WS2016/17,1,160,Computerlinguistik,Bachelor,NF,7,8
+WS2016/17,1,160,Computerlinguistik,Bachelor,NF,11,1
+WS2016/17,1,160,Computerlinguistik,Master,HF,2,5
+WS2016/17,1,160,Computerlinguistik,Master,HF,3,9
+WS2016/17,1,160,Computerlinguistik,Master,HF,4,3
+WS2016/17,1,160,Computerlinguistik,Master,HF,5,12
+WS2016/17,1,160,Computerlinguistik,Master,HF,6,5
+WS2016/17,1,160,Computerlinguistik,Master,HF,7,2
+WS2016/17,1,160,Computerlinguistik,Master,HF,9,2
+WS2016/17,1,160,Computerlinguistik,Master,HF,11,2
+WS2016/17,1,160,Computerlinguistik,Master,HF,>12,3
+WS2016/17,1,160,Computerlinguistik,nicht in BRD,HF,2,1
+WS2016/17,1,160,Computerlinguistik,Promotion,HF,2,2
+WS2016/17,1,160,Computerlinguistik,Promotion,HF,9,1
+WS2016/17,1,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,51
+WS2016/17,1,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,23
+WS2016/17,1,162,Computerlinguistik / Computational Linguistics,Master,HF,1,17
+WS2016/17,1,162,Computerlinguistik / Computational Linguistics,nicht in BRD,HF,1,4
+WS2016/17,1,162,Computerlinguistik / Computational Linguistics,Promotion,HF,1,1
+SS2017,2,161,Computational Linguistics,Bachelor,HF,2,1
+SS2017,2,161,Computational Linguistics,Bachelor,HF,3,2
+SS2017,2,161,Computational Linguistics,Bachelor,HF,4,28
+SS2017,2,161,Computational Linguistics,Bachelor,HF,5,1
+SS2017,2,161,Computational Linguistics,Bachelor,HF,6,25
+SS2017,2,161,Computational Linguistics,Bachelor,HF,9,1
+SS2017,2,160,Computerlinguistik,Bachelor,HF,3,1
+SS2017,2,160,Computerlinguistik,Bachelor,HF,7,1
+SS2017,2,160,Computerlinguistik,Bachelor,HF,8,7
+SS2017,2,160,Computerlinguistik,Bachelor,HF,11,2
+SS2017,2,160,Computerlinguistik,Bachelor,NF,3,1
+SS2017,2,160,Computerlinguistik,Bachelor,NF,4,10
+SS2017,2,160,Computerlinguistik,Bachelor,NF,5,2
+SS2017,2,160,Computerlinguistik,Bachelor,NF,6,10
+SS2017,2,160,Computerlinguistik,Bachelor,NF,7,1
+SS2017,2,160,Computerlinguistik,Bachelor,NF,8,3
+SS2017,2,160,Computerlinguistik,Bachelor,NF,12,1
+SS2017,2,160,Computerlinguistik,Master,HF,3,5
+SS2017,2,160,Computerlinguistik,Master,HF,4,8
+SS2017,2,160,Computerlinguistik,Master,HF,5,3
+SS2017,2,160,Computerlinguistik,Master,HF,6,9
+SS2017,2,160,Computerlinguistik,Master,HF,7,5
+SS2017,2,160,Computerlinguistik,Master,HF,8,1
+SS2017,2,160,Computerlinguistik,Master,HF,10,2
+SS2017,2,160,Computerlinguistik,Master,HF,12,1
+SS2017,2,160,Computerlinguistik,Master,HF,>12,3
+SS2017,2,160,Computerlinguistik,nicht in BRD,HF,1,1
+SS2017,2,160,Computerlinguistik,Promotion,HF,3,2
+SS2017,2,160,Computerlinguistik,Promotion,HF,10,1
+SS2017,2,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,47
+SS2017,2,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,16
+SS2017,2,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,13
+SS2017,2,162,Computerlinguistik / Computational Linguistics,Master,HF,1,12
+SS2017,2,162,Computerlinguistik / Computational Linguistics,Master,HF,2,16
+SS2017,2,162,Computerlinguistik / Computational Linguistics,nicht in BRD,HF,2,2
+SS2017,2,162,Computerlinguistik / Computational Linguistics,Promotion,HF,2,1
+WS2017/18,3,161,Computational Linguistics,Bachelor,HF,3,1
+WS2017/18,3,161,Computational Linguistics,Bachelor,HF,4,1
+WS2017/18,3,161,Computational Linguistics,Bachelor,HF,5,23
+WS2017/18,3,161,Computational Linguistics,Bachelor,HF,6,2
+WS2017/18,3,161,Computational Linguistics,Bachelor,HF,7,17
+WS2017/18,3,161,Computational Linguistics,Bachelor,HF,8,1
+WS2017/18,3,160,Computerlinguistik,Bachelor,HF,4,1
+WS2017/18,3,160,Computerlinguistik,Bachelor,HF,9,7
+WS2017/18,3,160,Computerlinguistik,Bachelor,HF,10,1
+WS2017/18,3,160,Computerlinguistik,Bachelor,HF,12,1
+WS2017/18,3,160,Computerlinguistik,Bachelor,NF,4,1
+WS2017/18,3,160,Computerlinguistik,Bachelor,NF,5,10
+WS2017/18,3,160,Computerlinguistik,Bachelor,NF,6,2
+WS2017/18,3,160,Computerlinguistik,Bachelor,NF,7,9
+WS2017/18,3,160,Computerlinguistik,Bachelor,NF,8,1
+WS2017/18,3,160,Computerlinguistik,Bachelor,NF,9,3
+WS2017/18,3,160,Computerlinguistik,Bachelor,NF,>12,1
+WS2017/18,3,160,Computerlinguistik,Master,HF,3,1
+WS2017/18,3,160,Computerlinguistik,Master,HF,4,5
+WS2017/18,3,160,Computerlinguistik,Master,HF,5,6
+WS2017/18,3,160,Computerlinguistik,Master,HF,6,1
+WS2017/18,3,160,Computerlinguistik,Master,HF,7,6
+WS2017/18,3,160,Computerlinguistik,Master,HF,8,4
+WS2017/18,3,160,Computerlinguistik,Master,HF,11,1
+WS2017/18,3,160,Computerlinguistik,Master,HF,>12,4
+WS2017/18,3,160,Computerlinguistik,nicht in BRD,HF,2,1
+WS2017/18,3,160,Computerlinguistik,Promotion,HF,4,2
+WS2017/18,3,160,Computerlinguistik,Promotion,HF,11,1
+WS2017/18,3,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,35
+WS2017/18,3,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,40
+WS2017/18,3,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,19
+WS2017/18,3,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,6
+WS2017/18,3,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,7
+WS2017/18,3,162,Computerlinguistik / Computational Linguistics,Master,HF,0,1
+WS2017/18,3,162,Computerlinguistik / Computational Linguistics,Master,HF,1,11
+WS2017/18,3,162,Computerlinguistik / Computational Linguistics,Master,HF,2,11
+WS2017/18,3,162,Computerlinguistik / Computational Linguistics,Master,HF,3,15
+WS2017/18,3,162,Computerlinguistik / Computational Linguistics,nicht in BRD,HF,1,2
+WS2017/18,3,162,Computerlinguistik / Computational Linguistics,Promotion,HF,1,2
+WS2017/18,3,162,Computerlinguistik / Computational Linguistics,Promotion,HF,3,1
+SS2018,4,161,Computational Linguistics,Bachelor,HF,3,1
+SS2018,4,161,Computational Linguistics,Bachelor,HF,5,1
+SS2018,4,161,Computational Linguistics,Bachelor,HF,6,14
+SS2018,4,161,Computational Linguistics,Bachelor,HF,7,1
+SS2018,4,161,Computational Linguistics,Bachelor,HF,8,13
+SS2018,4,161,Computational Linguistics,Bachelor,HF,9,1
+SS2018,4,160,Computerlinguistik,Bachelor,HF,4,1
+SS2018,4,160,Computerlinguistik,Bachelor,HF,10,5
+SS2018,4,160,Computerlinguistik,Bachelor,NF,6,4
+SS2018,4,160,Computerlinguistik,Bachelor,NF,7,1
+SS2018,4,160,Computerlinguistik,Bachelor,NF,8,3
+SS2018,4,160,Computerlinguistik,Master,HF,3,1
+SS2018,4,160,Computerlinguistik,Master,HF,5,2
+SS2018,4,160,Computerlinguistik,Master,HF,8,1
+SS2018,4,160,Computerlinguistik,Master,HF,12,1
+SS2018,4,160,Computerlinguistik,Master,HF,>12,2
+SS2018,4,160,Computerlinguistik,nicht in BRD,HF,3,1
+SS2018,4,160,Computerlinguistik,Promotion,HF,5,2
+SS2018,4,160,Computerlinguistik,Promotion,HF,12,1
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,30
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,40
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,3
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,1
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,1
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,9
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,16
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,3
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,5
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,1
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,4
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,1
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,8,3
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,9,1
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,10,2
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,>12,1
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Master,HF,0,1
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Master,HF,1,5
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Master,HF,2,10
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Master,HF,3,10
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Master,HF,4,14
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Master,HF,5,4
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Master,HF,6,4
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Master,HF,7,1
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Master,HF,8,1
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Master,HF,9,3
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Master,HF,>12,1
+SS2018,4,162,Computerlinguistik / Computational Linguistics,nicht in BRD,HF,1,2
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Promotion,HF,2,1
+SS2018,4,162,Computerlinguistik / Computational Linguistics,Promotion,HF,4,1
+WS2018/19,5,161,Computational Linguistics,Bachelor,HF,4,1
+WS2018/19,5,161,Computational Linguistics,Bachelor,HF,6,1
+WS2018/19,5,161,Computational Linguistics,Bachelor,HF,7,9
+WS2018/19,5,161,Computational Linguistics,Bachelor,HF,8,1
+WS2018/19,5,161,Computational Linguistics,Bachelor,HF,9,7
+WS2018/19,5,161,Computational Linguistics,Bachelor,HF,10,1
+WS2018/19,5,160,Computerlinguistik,Bachelor,HF,11,4
+WS2018/19,5,160,Computerlinguistik,Bachelor,NF,7,2
+WS2018/19,5,160,Computerlinguistik,Bachelor,NF,8,1
+WS2018/19,5,160,Computerlinguistik,Bachelor,NF,9,4
+WS2018/19,5,160,Computerlinguistik,Master,HF,4,1
+WS2018/19,5,160,Computerlinguistik,Master,HF,5,1
+WS2018/19,5,160,Computerlinguistik,Master,HF,6,1
+WS2018/19,5,160,Computerlinguistik,Master,HF,>12,2
+WS2018/19,5,160,Computerlinguistik,Promotion,HF,6,1
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,31
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,2
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,24
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,1
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,36
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,2
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,2
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,21
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,3
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,9
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,2
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,4
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,4
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,8,1
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,10,1
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,11,1
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,>12,1
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Master,HF,1,16
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Master,HF,2,5
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Master,HF,3,10
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Master,HF,4,10
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Master,HF,5,11
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Master,HF,6,4
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Master,HF,7,3
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Master,HF,9,1
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Master,HF,10,2
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Master,HF,>12,1
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,nicht in BRD,HF,1,1
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Promotion,HF,3,1
+WS2018/19,5,162,Computerlinguistik / Computational Linguistics,Promotion,HF,5,1
+SS2019,6,161,Computational Linguistics,Bachelor,HF,4,1
+SS2019,6,161,Computational Linguistics,Bachelor,HF,7,1
+SS2019,6,161,Computational Linguistics,Bachelor,HF,8,5
+SS2019,6,161,Computational Linguistics,Bachelor,HF,9,1
+SS2019,6,161,Computational Linguistics,Bachelor,HF,10,7
+SS2019,6,161,Computational Linguistics,Bachelor,HF,11,1
+SS2019,6,160,Computerlinguistik,Bachelor,HF,10,1
+SS2019,6,160,Computerlinguistik,Bachelor,HF,12,2
+SS2019,6,160,Computerlinguistik,Bachelor,NF,1,1
+SS2019,6,160,Computerlinguistik,Bachelor,NF,8,2
+SS2019,6,160,Computerlinguistik,Bachelor,NF,9,1
+SS2019,6,160,Computerlinguistik,Bachelor,NF,10,4
+SS2019,6,160,Computerlinguistik,Master,HF,5,2
+SS2019,6,160,Computerlinguistik,Master,HF,7,1
+SS2019,6,160,Computerlinguistik,Master,HF,>12,3
+SS2019,6,160,Computerlinguistik,nicht in BRD,HF,1,2
+SS2019,6,160,Computerlinguistik,Promotion,HF,7,1
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,2
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,29
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,1
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,23
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,2
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,31
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,2
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,9,1
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,7
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,15
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,3
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,6
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,1
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,3
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,8,1
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,12,1
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Master,HF,0,1
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Master,HF,1,10
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Master,HF,2,14
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Master,HF,3,4
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Master,HF,4,10
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Master,HF,5,9
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Master,HF,6,9
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Master,HF,7,4
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Master,HF,8,2
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Master,HF,11,2
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Promotion,HF,4,1
+SS2019,6,162,Computerlinguistik / Computational Linguistics,Promotion,HF,6,1
+WS2019/20,7,161,Computational Linguistics,Bachelor,HF,8,1
+WS2019/20,7,161,Computational Linguistics,Bachelor,HF,9,4
+WS2019/20,7,161,Computational Linguistics,Bachelor,HF,11,4
+WS2019/20,7,161,Computational Linguistics,Bachelor,HF,12,1
+WS2019/20,7,160,Computerlinguistik,Bachelor,HF,10,1
+WS2019/20,7,160,Computerlinguistik,Bachelor,HF,>12,1
+WS2019/20,7,160,Computerlinguistik,Bachelor,NF,1,1
+WS2019/20,7,160,Computerlinguistik,Bachelor,NF,9,1
+WS2019/20,7,160,Computerlinguistik,Bachelor,NF,10,1
+WS2019/20,7,160,Computerlinguistik,Bachelor,NF,11,3
+WS2019/20,7,160,Computerlinguistik,Master,HF,5,1
+WS2019/20,7,160,Computerlinguistik,Master,HF,6,1
+WS2019/20,7,160,Computerlinguistik,Master,HF,8,1
+WS2019/20,7,160,Computerlinguistik,Promotion,HF,8,1
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,38
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,2
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,23
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,1
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,19
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,3
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,27
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,10,1
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,23
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,4
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,6
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,4
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,4
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,1
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,2
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,9,2
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,>12,1
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Master,HF,0,1
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Master,HF,1,14
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Master,HF,2,9
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Master,HF,3,13
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Master,HF,4,4
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Master,HF,5,10
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Master,HF,6,7
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Master,HF,7,7
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Master,HF,8,2
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Master,HF,9,1
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Master,HF,12,2
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,nicht in BRD,HF,1,2
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Promotion,HF,5,1
+WS2019/20,7,162,Computerlinguistik / Computational Linguistics,Promotion,HF,7,1
+SS2020,8,161,Computational Linguistics,Bachelor,HF,9,2
+SS2020,8,161,Computational Linguistics,Bachelor,HF,10,1
+SS2020,8,161,Computational Linguistics,Bachelor,HF,12,4
+SS2020,8,160,Computerlinguistik,Bachelor,HF,11,1
+SS2020,8,160,Computerlinguistik,Bachelor,NF,0,1
+SS2020,8,160,Computerlinguistik,Bachelor,NF,1,1
+SS2020,8,160,Computerlinguistik,Bachelor,NF,2,1
+SS2020,8,160,Computerlinguistik,Bachelor,NF,4,1
+SS2020,8,160,Computerlinguistik,Bachelor,NF,11,1
+SS2020,8,160,Computerlinguistik,Bachelor,NF,12,2
+SS2020,8,160,Computerlinguistik,Master,HF,5,1
+SS2020,8,160,Computerlinguistik,Master,HF,7,1
+SS2020,8,160,Computerlinguistik,Master,HF,9,1
+SS2020,8,160,Computerlinguistik,nicht in BRD,HF,1,1
+SS2020,8,160,Computerlinguistik,Promotion,HF,9,1
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,34
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,2
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,21
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,1
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,15
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,2
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,21
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,10,1
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,11,1
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,2
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,22
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,4
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,6
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,4
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,3
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,1
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Master,HF,0,1
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Master,HF,1,3
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Master,HF,2,12
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Master,HF,3,10
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Master,HF,4,11
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Master,HF,5,4
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Master,HF,6,7
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Master,HF,7,4
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Master,HF,8,3
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Master,HF,9,2
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Master,HF,10,1
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Master,HF,>12,1
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Promotion,HF,2,1
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Promotion,HF,6,1
+SS2020,8,162,Computerlinguistik / Computational Linguistics,Promotion,HF,8,1
+WS2020/21,9,161,Computational Linguistics,Bachelor,HF,>12,3
+WS2020/21,9,160,Computerlinguistik,Bachelor,HF,11,1
+WS2020/21,9,160,Computerlinguistik,Bachelor,NF,1,2
+WS2020/21,9,160,Computerlinguistik,Bachelor,NF,12,1
+WS2020/21,9,160,Computerlinguistik,Bachelor,NF,>12,1
+WS2020/21,9,160,Computerlinguistik,Master,HF,5,1
+WS2020/21,9,160,Computerlinguistik,Master,HF,8,1
+WS2020/21,9,160,Computerlinguistik,nicht in BRD,HF,1,2
+WS2020/21,9,160,Computerlinguistik,Promotion,HF,10,1
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,32
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,5
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,22
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,2
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,20
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,12
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,1
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,9,17
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,11,1
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,12,1
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,10
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,4
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,12
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,4
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,6
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,3
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,1
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Master,HF,0,2
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Master,HF,1,13
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Master,HF,2,6
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Master,HF,3,8
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Master,HF,4,10
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Master,HF,5,9
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Master,HF,6,5
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Master,HF,7,5
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Master,HF,8,4
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Master,HF,9,4
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Master,HF,10,2
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Master,HF,11,1
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Master,HF,>12,1
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Promotion,HF,7,1
+WS2020/21,9,162,Computerlinguistik / Computational Linguistics,Promotion,HF,9,1
+SS2021,10,161,Computational Linguistics,Bachelor,HF,>12,3
+SS2021,10,160,Computerlinguistik,Bachelor,HF,11,1
+SS2021,10,160,Computerlinguistik,Bachelor,NF,>12,1
+SS2021,10,160,Computerlinguistik,Master,HF,5,1
+SS2021,10,160,Computerlinguistik,nicht in BRD,HF,2,1
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,0,1
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,3
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,22
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,5
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,18
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,2
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,19
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,2
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,9
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,10,11
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,12,1
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,>12,1
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,5
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,11
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,3
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,11
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,3
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,5
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,3
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,8,1
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Master,HF,1,12
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Master,HF,2,10
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Master,HF,3,5
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Master,HF,4,6
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Master,HF,5,8
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Master,HF,6,6
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Master,HF,7,2
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Master,HF,8,4
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Master,HF,9,3
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Master,HF,10,3
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Master,HF,11,2
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Master,HF,12,1
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Promotion,HF,8,1
+SS2021,10,162,Computerlinguistik / Computational Linguistics,Promotion,HF,10,1
+WS2021/22,11,161,Computational Linguistics,Bachelor,HF,>12,2
+WS2021/22,11,160,Computerlinguistik,Bachelor,HF,12,1
+WS2021/22,11,160,Computerlinguistik,Master,HF,6,1
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,40
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,2
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,20
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,4
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,17
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,2
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,16
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,1
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,9,3
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,11,6
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,>12,2
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,7
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,1
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,10
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,2
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,8
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,1
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,3
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,8,3
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,9,1
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Master,HF,1,16
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Master,HF,2,10
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Master,HF,3,9
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Master,HF,4,4
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Master,HF,5,5
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Master,HF,6,7
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Master,HF,7,4
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Master,HF,8,1
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Master,HF,9,3
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Master,HF,10,3
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Master,HF,11,3
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Master,HF,12,1
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Master,HF,>12,1
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,nicht in BRD,HF,1,2
+WS2021/22,11,162,Computerlinguistik / Computational Linguistics,Promotion,HF,9,1
+SS2022,12,161,Computational Linguistics,Bachelor,HF,>12,2
+SS2022,12,160,Computerlinguistik,Bachelor,HF,>12,1
+SS2022,12,160,Computerlinguistik,Master,HF,7,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,33
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,3
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,17
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,4
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,16
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,9
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,9,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,10,2
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,12,4
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,>12,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,5
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,5
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,9
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,2
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,8
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,8,3
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,9,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,10,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Master,HF,1,9
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Master,HF,2,14
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Master,HF,3,10
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Master,HF,4,7
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Master,HF,5,3
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Master,HF,6,5
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Master,HF,7,5
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Master,HF,8,3
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Master,HF,9,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Master,HF,10,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Master,HF,11,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Master,HF,12,2
+SS2022,12,162,Computerlinguistik / Computational Linguistics,nicht in BRD,HF,1,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,nicht in BRD,HF,2,2
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Promotion,HF,1,1
+SS2022,12,162,Computerlinguistik / Computational Linguistics,Promotion,HF,10,1
+WS2022/23,13,160,Computerlinguistik,Bachelor,NF,1,1
+WS2022/23,13,160,Computerlinguistik,Master,HF,8,1
+WS2022/23,13,160,Computerlinguistik,nicht in BRD,HF,1,1
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,54
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,29
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,3
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,17
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,5
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,14
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,1
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,9,7
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,11,1
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,>12,5
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,11
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,1
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,3
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,1
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,8
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,2
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,6
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,8,1
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,9,2
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,11,1
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Master,HF,1,13
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Master,HF,2,7
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Master,HF,3,15
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Master,HF,4,6
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Master,HF,5,5
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Master,HF,6,2
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Master,HF,7,4
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Master,HF,8,4
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Master,HF,9,2
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Master,HF,11,1
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Master,HF,12,1
+WS2022/23,13,162,Computerlinguistik / Computational Linguistics,Master,HF,>12,2
+SS2023,14,160,Computerlinguistik,Bachelor,NF,1,1
+SS2023,14,160,Computerlinguistik,Master,HF,9,1
+SS2023,14,160,Computerlinguistik,nicht in BRD,HF,2,1
+SS2023,14,160,Computerlinguistik,Promotion,HF,1,1
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,48
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,26
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,3
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,16
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,3
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,9
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,10,5
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,12,1
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,>12,5
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,2
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,11
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,1
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,3
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,8
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,2
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,8,6
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,9,1
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,10,2
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,12,1
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Master,HF,1,9
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Master,HF,2,10
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Master,HF,3,6
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Master,HF,4,14
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Master,HF,5,5
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Master,HF,6,3
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Master,HF,7,1
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Master,HF,8,2
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Master,HF,9,3
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Master,HF,10,1
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Master,HF,12,1
+SS2023,14,162,Computerlinguistik / Computational Linguistics,Master,HF,>12,2
+WS2023/24,15,160,Computerlinguistik,Master,HF,10,1
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,54
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,1
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,40
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,26
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,2
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,11
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,2
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,9,6
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,11,5
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,>12,5
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,19
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,3
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,11
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,1
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,1
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,8
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,8,1
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,9,5
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,10,1
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,11,2
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,>12,1
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Master,HF,1,14
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Master,HF,2,7
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Master,HF,3,8
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Master,HF,4,6
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Master,HF,5,12
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Master,HF,6,4
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Master,HF,7,1
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Master,HF,9,1
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Master,HF,10,3
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Master,HF,>12,2
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,nicht in BRD,HF,1,3
+WS2023/24,15,162,Computerlinguistik / Computational Linguistics,Promotion,HF,2,1
+SS2024,16,160,Computerlinguistik,Bachelor,NF,1,1
+SS2024,16,160,Computerlinguistik,Master,HF,11,1
+SS2024,16,160,Computerlinguistik,nicht in BRD,HF,1,1
+SS2024,16,160,Computerlinguistik,nicht in BRD,HF,2,1
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,50
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,1
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,37
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,26
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,3
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,10
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,9,2
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,10,6
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,12,5
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,>12,3
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,2
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,17
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,3
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,9
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,1
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,1
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,8,7
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,9,1
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,10,4
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,11,1
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,>12,1
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Master,HF,1,13
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Master,HF,2,14
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Master,HF,3,7
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Master,HF,4,7
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Master,HF,5,7
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Master,HF,6,10
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Master,HF,7,3
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Master,HF,8,1
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Master,HF,11,3
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Master,HF,>12,1
+SS2024,16,162,Computerlinguistik / Computational Linguistics,Promotion,HF,3,1
+WS2024/25,17,160,Computerlinguistik,Master,HF,12,1
+WS2024/25,17,160,Computerlinguistik,nicht in BRD,HF,1,4
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,72
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,1
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,45
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,1
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,36
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,1
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,18
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,3
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,9,7
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,10,2
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,11,4
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,>12,6
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,19
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,1
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,10
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,9
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,1
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,9,7
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,10,1
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,11,3
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,12,1
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,>12,1
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Master,HF,1,13
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Master,HF,2,9
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Master,HF,3,14
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Master,HF,4,7
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Master,HF,5,6
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Master,HF,6,7
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Master,HF,7,8
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Master,HF,8,3
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Master,HF,9,1
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Master,HF,12,2
+WS2024/25,17,162,Computerlinguistik / Computational Linguistics,Promotion,HF,4,1
+SS2025,18,160,Computerlinguistik,Master,HF,>12,1
+SS2025,18,160,Computerlinguistik,nicht in BRD,HF,1,2
+SS2025,18,160,Computerlinguistik,nicht in BRD,HF,2,2
+SS2025,18,160,Computerlinguistik,Promotion,HF,1,1
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,2
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,61
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,40
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,1
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,33
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,1
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,13
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,9,2
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,10,5
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,11,1
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,12,3
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,>12,7
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,6
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,17
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,1
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,8
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,1
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,7
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,1
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,10,6
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,12,1
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,>12,1
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Master,HF,1,11
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Master,HF,2,9
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Master,HF,3,8
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Master,HF,4,14
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Master,HF,5,7
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Master,HF,6,6
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Master,HF,7,5
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Master,HF,8,5
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Master,HF,9,2
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Master,HF,10,1
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Master,HF,>12,1
+SS2025,18,162,Computerlinguistik / Computational Linguistics,Promotion,HF,5,1
+WS2025/26,19,160,Computerlinguistik,Master,HF,>12,1
+WS2025/26,19,160,Computerlinguistik,nicht in BRD,HF,1,2
+WS2025/26,19,160,Computerlinguistik,Promotion,HF,2,1
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,1,54
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,1
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,47
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,1
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,36
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,1
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,23
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,1
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,9,12
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,10,2
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,11,5
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,12,1
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,>12,9
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,8
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,3,11
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,1
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,5
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,7
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,8,1
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,10,1
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,11,5
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,>12,1
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Master,HF,1,35
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Master,HF,2,8
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Master,HF,3,9
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Master,HF,4,8
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Master,HF,5,13
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Master,HF,6,7
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Master,HF,7,6
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Master,HF,8,3
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Master,HF,9,3
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Master,HF,10,2
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Master,HF,11,1
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Master,HF,>12,1
+WS2025/26,19,162,Computerlinguistik / Computational Linguistics,Promotion,HF,6,1
+SS2026,20,160,Computerlinguistik,Master,HF,>12,1
+SS2026,20,160,Computerlinguistik,nicht in BRD,HF,1,1
+SS2026,20,160,Computerlinguistik,Promotion,HF,1,1
+SS2026,20,160,Computerlinguistik,Promotion,HF,3,1
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,2,48
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,3,1
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,4,43
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,5,2
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,6,29
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,7,1
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,8,17
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,9,1
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,10,9
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,11,2
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,12,3
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,HF,>12,10
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,1,2
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,2,8
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,4,10
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,5,1
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,6,4
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,7,1
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,8,5
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,9,1
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,11,1
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,12,5
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Bachelor,NF,>12,1
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Master,HF,1,19
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Master,HF,2,30
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Master,HF,3,8
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Master,HF,4,9
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Master,HF,5,8
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Master,HF,6,13
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Master,HF,7,5
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Master,HF,8,4
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Master,HF,9,2
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Master,HF,10,2
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Master,HF,11,2
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Master,HF,12,1
+SS2026,20,162,Computerlinguistik / Computational Linguistics,Promotion,HF,7,1
