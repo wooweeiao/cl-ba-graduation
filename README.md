@@ -8,7 +8,7 @@ An interactive page that follows each entry cohort of the Computational Linguist
 
 ## What the numbers are
 
-- **Source**: the [Studierendenstatistik](https://uni-tuebingen.de/en/einrichtungen/verwaltung/iv-studierende/studierendenabteilung/statistiken/) published each semester by Universität Tübingen, table "Studienfachbelegung nach Abschlusszielen", winter 2016/17 – summer 2026 (20 semesters). The original PDFs are not included in this repository.
+- **Source**: the [Studierendenstatistik](https://uni-tuebingen.de/en/einrichtungen/verwaltung/iv-studierende/studierendenabteilung/statistiken/) published each semester by Universität Tübingen, table "Studienfachbelegung nach Abschlusszielen", winter 2016/17 – winter 2026/27 (21 semesters). The original PDFs are not included in this repository.
 - **Programme**: subject codes 160, 161 and 162 are versions of the same programme under different exam regulations; their Bachelor Hauptfach counts are added together. Minor and master's students are not included.
 - **Rule**: the statistics give head counts per Fachsemester, with no individual records. A cohort's count in semester k minus its count in semester k+1 one semester later is the number who left after semester k. Leaving after semesters 1–5 is counted as leaving early; leaving after semester 6 or later is counted as graduating.
 - **These are estimates, not official graduation data.** Few students in this programme graduate within the first 5 semesters and few leave without a degree from semester 6 onwards; the two errors point in opposite directions and may roughly cancel out.
@@ -35,7 +35,7 @@ The full method and its limitations are described at the bottom of the page.
 
 ```sh
 # 1. convert each statistics PDF to text
-pdftotext -layout statistik-ss-2026.pdf txt/statistik-ss-2026.txt
+pdftotext -layout statistik-ws-20262027.pdf txt/statistik-ws-20262027.txt
 # 2. extract the Computerlinguistik tables, then compute cohorts
 python3 build/parse.py txt data/parsed_rows.json
 python3 build/analyze.py data/parsed_rows.json data

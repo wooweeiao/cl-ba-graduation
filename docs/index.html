@@ -201,13 +201,13 @@ header h1 { text-align: center; }
 
 <script>
 /* ---------- data: Bachelor Hauptfach head counts N_1..N_12 per entry cohort (null = not yet observed) ---------- */
-const DATA = {"academic_year":{"WS2016/17":[51,48,42,43,38,34,29,22,17,11,6,4],"WS2017/18":[35,32,25,25,20,15,14,10,4,2,1,1],"WS2018/19":[33,31,25,23,22,21,17,10,7,5,5,5],"WS2019/20":[38,39,27,22,21,21,17,11,8,8,5,4],"WS2020/21":[35,24,23,20,20,18,14,13,9,7,7,null],"WS2021/22":[41,33,29,26,26,27,19,14,13,null,null,null],"WS2022/23":[54,49,41,38,37,34,24,null,null,null,null,null],"WS2023/24":[54,51,45,41,38,null,null,null,null,null,null,null],"WS2024/25":[74,62,48,null,null,null,null,null,null,null,null,null],"WS2025/26":[54,null,null,null,null,null,null,null,null,null,null,null]},"ws_only":{"WS2016/17":[51,48,41,41,36,31,27,21,17,11,6,4],"WS2017/18":[35,30,24,24,19,15,12,9,3,2,1,1],"WS2018/19":[31,29,23,21,20,19,16,9,7,5,5,5],"WS2019/20":[38,34,22,18,17,16,14,9,6,6,4,3],"WS2020/21":[32,22,20,17,17,16,11,10,7,5,5,3],"WS2021/22":[40,33,29,26,26,26,18,13,12,9,null,null],"WS2022/23":[54,48,40,37,36,33,23,17,null,null,null,null],"WS2023/24":[54,50,45,40,36,29,null,null,null,null,null,null],"WS2024/25":[72,61,47,43,null,null,null,null,null,null,null,null],"WS2025/26":[54,48,null,null,null,null,null,null,null,null,null,null]}};
+const DATA = {"academic_year":{"WS2016/17":[51,48,42,43,38,34,29,22,17,11,6,4],"WS2017/18":[35,32,25,25,20,15,14,10,4,2,1,1],"WS2018/19":[33,31,25,23,22,21,17,10,7,5,5,5],"WS2019/20":[38,39,27,22,21,21,17,11,8,8,5,4],"WS2020/21":[35,24,23,20,20,18,14,13,9,7,7,5],"WS2021/22":[41,33,29,26,26,27,19,14,13,10,null,null],"WS2022/23":[54,49,41,38,37,34,24,18,null,null,null,null],"WS2023/24":[54,51,45,41,38,31,null,null,null,null,null,null],"WS2024/25":[74,62,48,44,null,null,null,null,null,null,null,null],"WS2025/26":[54,49,null,null,null,null,null,null,null,null,null,null],"WS2026/27":[57,null,null,null,null,null,null,null,null,null,null,null]},"ws_only":{"WS2016/17":[51,48,41,41,36,31,27,21,17,11,6,4],"WS2017/18":[35,30,24,24,19,15,12,9,3,2,1,1],"WS2018/19":[31,29,23,21,20,19,16,9,7,5,5,5],"WS2019/20":[38,34,22,18,17,16,14,9,6,6,4,3],"WS2020/21":[32,22,20,17,17,16,11,10,7,5,5,3],"WS2021/22":[40,33,29,26,26,26,18,13,12,9,7,null],"WS2022/23":[54,48,40,37,36,33,23,17,9,null,null,null],"WS2023/24":[54,50,45,40,36,29,24,null,null,null,null,null],"WS2024/25":[72,61,47,43,39,null,null,null,null,null,null,null],"WS2025/26":[54,48,36,null,null,null,null,null,null,null,null,null],"WS2026/27":[57,null,null,null,null,null,null,null,null,null,null,null]}};
 
 /* ---------- strings: add an `en` block with the same keys to translate ---------- */
 const STR = { zh: {
   title: '图宾根大学计算语言学本科毕业率', filters: '筛选',
   h1:'图宾根计算语言学本科：中途离开与毕业',
-  lede: '根据图宾根大学 WS 2016/17 – SS 2026 共 20 个学期的在读人数统计，追踪 Computational Linguistics 本科主修（Bachelor Hauptfach）各入学届的去向。读了不超过 5 个学期就离开的记为中途离开，读到第 6 学期及以后才离开的记为毕业。',
+  lede: '根据图宾根大学 WS 2016/17 – WS 2026/27 共 21 个学期的在读人数统计，追踪 Computational Linguistics 本科主修（Bachelor Hauptfach）各入学届的去向。读了不超过 5 个学期就离开的记为中途离开，读到第 6 学期及以后才离开的记为毕业。',
   caveat: '<b>这里的毕业率是按上述规则推算的，不是官方毕业数据。</b>这样划分是因为这个专业在前 5 个学期内毕业的人很少，读到第 6 学期以后没毕业就离开的人也很少，这两种误差可能大致相互抵消，这里不作进一步讨论。',
   f_def: '届的划分', def_ay: '学年届', def_ws: '仅冬季入学',
   f_measure: '度量', m_ent: '占入学人数', m_haz: '占当学期在读人数', m_cnt: '人数',
@@ -238,7 +238,7 @@ const STR = { zh: {
   tip_sem: k => `${k} 学期内毕业`, tip_cohort: c => `${c} 届`,
   m_title: '口径与局限',
   method: [
-    '<b>数据来源</b>：Universität Tübingen 每学期公布的 <a href="https://uni-tuebingen.de/en/einrichtungen/verwaltung/iv-studierende/studierendenabteilung/statistiken/" target="_blank" rel="noopener">Studierendenstatistik</a>，表「Studienfachbelegung nach Abschlusszielen」，WS 2016/17 – SS 2026。专业代码 160、161、162 是同一项目的不同考试条例版本，这里把三者的 Bachelor Hauptfach 人数相加。',
+    '<b>数据来源</b>：Universität Tübingen 每学期公布的 <a href="https://uni-tuebingen.de/en/einrichtungen/verwaltung/iv-studierende/studierendenabteilung/statistiken/" target="_blank" rel="noopener">Studierendenstatistik</a>，表「Studienfachbelegung nach Abschlusszielen」，WS 2016/17 – WS 2026/27。专业代码 160、161、162 是同一项目的不同考试条例版本，这里把三者的 Bachelor Hauptfach 人数相加。',
     '<b>怎么追踪</b>：统计只给出每学期各 Fachsemester 的在读人数，没有个人记录。某届第 k 学期的人数减去下一学期第 k+1 学期的人数，就是第 k 学期之后离开的人数。',
     '<b>届的划分</b>：「学年届」把冬季入学的人和次年夏季入学的人算作一届，学期数落后一学期的人仍留在本届；「仅冬季入学」只看冬季那条线，落后一学期的人会被算成中途离开，结果略低。',
     '<b>毕业是推算的</b>：第 6 学期起离开的人全部记为毕业，所以「读到第 6 学期」的比例就是这里的最终毕业率。前 5 个学期内毕业的人会被错记为中途离开，第 6 学期起没毕业就离开的人会被错记为毕业；两类人都很少，方向相反，可能大致相互抵消。',
@@ -250,11 +250,11 @@ const STR = { zh: {
   ab_text: '我是这个专业的在读学生。做这个统计，是因为想知道学生总体上在哪个时间点做出继续或离开的决定。这里的数字不是对专业质量的评价，也不能用来预测某一个人的情况。希望它对正在考虑或正在读这个专业的同学有一点参考价值。',
   ab_text2: '在我选择本科项目的时候，我曾经希望我有看到过这样的数据。搬到异国他乡，选择一个未知的领域，选择一种生活，本质需要更多的信息，信息不透明是焦虑的来源。一个学校，一个学位，本质都是通往自己向往的生活的工具，而这个学位可以让你更加认识自己，也可以让你跟这个世界交手的时候有着更成熟锋锐的切入点，所以在信息全面的情况下作出选择是必要的。',
   ab_text3: '愿所有人都能走向自己喜欢的生活。',
-  foot: '数据截至 SS 2026（采集日 2026-05-19）。只含本科主修；副修和硕士不在内。'
+  foot: '数据截至 WS 2026/27（采集日 2026-11-13）。只含本科主修；副修和硕士不在内。'
 }, en: {
   title: 'Tübingen Computational Linguistics BA: graduation rates', filters: 'Filters',
   h1: 'Computational Linguistics BA at Tübingen: early leavers and graduates',
-  lede: 'Based on the University of Tübingen’s enrolment statistics for 20 semesters (winter 2016/17 – summer 2026), this page follows each entry cohort of the Computational Linguistics bachelor’s major (Bachelor Hauptfach). Students who leave after one of the first 5 semesters are counted as leaving early; students who leave after semester 6 or later are counted as graduates.',
+  lede: 'Based on the University of Tübingen’s enrolment statistics for 21 semesters (winter 2016/17 – winter 2026/27), this page follows each entry cohort of the Computational Linguistics bachelor’s major (Bachelor Hauptfach). Students who leave after one of the first 5 semesters are counted as leaving early; students who leave after semester 6 or later are counted as graduates.',
   caveat: '<b>The graduation rates here are estimated from that rule. They are not official graduation data.</b> The rule was chosen because few students in this programme graduate within the first 5 semesters and few leave without a degree from semester 6 onwards; these two errors may roughly cancel each other out, which is not examined further here.',
   f_def: 'Cohort definition', def_ay: 'Academic year', def_ws: 'Winter entry only',
   f_measure: 'Measure', m_ent: '% of entrants', m_haz: '% of enrolled that semester', m_cnt: 'Head count',
@@ -285,7 +285,7 @@ const STR = { zh: {
   tip_sem: k => `Graduated within ${k} semesters`, tip_cohort: c => `${c} cohort`,
   m_title: 'Method and limitations',
   method: [
-    '<b>Source</b>: the <a href="https://uni-tuebingen.de/en/einrichtungen/verwaltung/iv-studierende/studierendenabteilung/statistiken/" target="_blank" rel="noopener">Studierendenstatistik</a> published each semester by Universität Tübingen, table “Studienfachbelegung nach Abschlusszielen”, winter 2016/17 – summer 2026. Subject codes 160, 161 and 162 are versions of the same programme under different exam regulations; their Bachelor Hauptfach counts are added together.',
+    '<b>Source</b>: the <a href="https://uni-tuebingen.de/en/einrichtungen/verwaltung/iv-studierende/studierendenabteilung/statistiken/" target="_blank" rel="noopener">Studierendenstatistik</a> published each semester by Universität Tübingen, table “Studienfachbelegung nach Abschlusszielen”, winter 2016/17 – winter 2026/27. Subject codes 160, 161 and 162 are versions of the same programme under different exam regulations; their Bachelor Hauptfach counts are added together.',
     '<b>Tracking</b>: the statistics give the number of students enrolled in each Fachsemester every semester, with no individual records. A cohort’s count in semester k minus its count in semester k+1 one semester later is the number who left after semester k.',
     '<b>Cohort definition</b>: “Academic year” treats winter entrants and the following summer’s entrants as one cohort, so students who fall one semester behind stay in their cohort. “Winter entry only” follows the winter line alone; students who fall one semester behind are then counted as leaving early, and the results come out slightly lower.',
     '<b>Graduation is estimated</b>: everyone who leaves after semester 6 or later is counted as a graduate, so the share that reached semester 6 is the eventual graduation rate used here. Students who graduate within the first 5 semesters are miscounted as leaving early, and students who leave without a degree from semester 6 onwards are miscounted as graduates; both groups are small and the errors point in opposite directions, so they may roughly cancel out.',
@@ -297,7 +297,7 @@ const STR = { zh: {
   ab_text: 'I am a student in this programme. I put these figures together because I wanted to know at which point students, taken as a whole, decide to stay or to leave. The numbers are not a judgement on the quality of the programme, and they cannot predict what will happen to any one person. I hope they are a useful reference for students who are considering the programme or already in it.',
   ab_text2: 'When I was choosing a bachelor’s programme, I wished I had seen data like this. Moving to a foreign country, choosing an unfamiliar field and choosing a way of life all call for more information, and information that is not transparent is where the anxiety comes from. A university and a degree are, at heart, tools for reaching the life you long for. This degree can help you know yourself better, and it can give you a more mature, sharper point of entry when you come to grips with the world, so it is necessary to make the choice with full information.',
   ab_text3: 'May everyone find their way to a life they love.',
-  foot: 'Data up to summer semester 2026 (collected 19 May 2026). Bachelor major only; minor and master’s students are not included.'
+  foot: 'Data up to winter semester 2026/27 (collected 13 November 2026). Bachelor major only; minor and master’s students are not included.'
 } };
 function pickLang() {
   const h = location.hash.replace('#', '');

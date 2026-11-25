@@ -3,7 +3,7 @@ usage: analyze.py parsed.json outdir"""
 import json,csv,sys,os,re
 EXCLUDE={'SS2016'}   # semesters left out of the analysis
 rows=[r for r in json.load(open(sys.argv[1])) if r['sem'] not in EXCLUDE]; out=sys.argv[2]
-T=21; TMIN=1; KMAX=12   # sem_index 0 = SS2016 (excluded), 1 = WS2016/17, ..., 20 = SS2026
+T=22; TMIN=1; KMAX=12   # sem_index 0 = SS2016 (excluded), 1 = WS2016/17, ..., 21 = WS2026/27; raise T by one per new semester
 def tidx(s): return 2*(int(s[2:6])-2016)+(0 if s.startswith('SS') else 1)
 def tname(t):
     y=2016+t//2

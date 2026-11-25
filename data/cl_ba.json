@@ -19,7 +19,8 @@
   "WS2024/25",
   "SS2025",
   "WS2025/26",
-  "SS2026"
+  "SS2026",
+  "WS2026/27"
  ],
  "fachsemester_cols": [
   "0",
@@ -357,6 +358,22 @@
    2,
    3,
    10
+  ],
+  [
+   0,
+   57,
+   1,
+   36,
+   1,
+   39,
+   2,
+   24,
+   1,
+   9,
+   1,
+   7,
+   2,
+   9
   ]
  ],
  "cohorts": {
@@ -513,7 +530,7 @@
     9,
     7,
     7,
-    null
+    5
    ],
    "WS2021/22": [
     41,
@@ -525,7 +542,7 @@
     19,
     14,
     13,
-    null,
+    10,
     null,
     null
    ],
@@ -537,7 +554,7 @@
     37,
     34,
     24,
-    null,
+    18,
     null,
     null,
     null,
@@ -549,7 +566,7 @@
     45,
     41,
     38,
-    null,
+    31,
     null,
     null,
     null,
@@ -561,7 +578,7 @@
     74,
     62,
     48,
-    null,
+    44,
     null,
     null,
     null,
@@ -573,6 +590,20 @@
    ],
    "WS2025/26": [
     54,
+    49,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "WS2026/27": [
+    57,
     null,
     null,
     null,
@@ -752,7 +783,7 @@
     13,
     12,
     9,
-    null,
+    7,
     null
    ],
    "WS2022/23": [
@@ -764,7 +795,7 @@
     33,
     23,
     17,
-    null,
+    9,
     null,
     null,
     null
@@ -776,7 +807,7 @@
     40,
     36,
     29,
-    null,
+    24,
     null,
     null,
     null,
@@ -788,7 +819,7 @@
     61,
     47,
     43,
-    null,
+    39,
     null,
     null,
     null,
@@ -800,6 +831,20 @@
    "WS2025/26": [
     54,
     48,
+    36,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   "WS2026/27": [
+    57,
+    null,
     null,
     null,
     null,
@@ -819,13 +864,13 @@
     "cohort_def": "academic_year",
     "fachsemester": 1,
     "event": "left_early",
-    "n_cohorts": 9,
-    "cohorts": "WS2016/17–WS2024/25",
-    "at_risk": 415,
-    "left": 46,
-    "hazard": 0.1108,
+    "n_cohorts": 10,
+    "cohorts": "WS2016/17–WS2025/26",
+    "at_risk": 469,
+    "left": 51,
+    "hazard": 0.1087,
     "surviving_before": 1.0,
-    "share_of_entrants": 0.1108
+    "share_of_entrants": 0.1087
    },
    {
     "cohort_def": "academic_year",
@@ -836,20 +881,20 @@
     "at_risk": 369,
     "left": 64,
     "hazard": 0.1734,
-    "surviving_before": 0.8892,
-    "share_of_entrants": 0.1542
+    "surviving_before": 0.8913,
+    "share_of_entrants": 0.1546
    },
    {
     "cohort_def": "academic_year",
     "fachsemester": 3,
     "event": "left_early",
-    "n_cohorts": 8,
-    "cohorts": "WS2016/17–WS2023/24",
-    "at_risk": 257,
-    "left": 19,
-    "hazard": 0.0739,
-    "surviving_before": 0.7349,
-    "share_of_entrants": 0.0543
+    "n_cohorts": 9,
+    "cohorts": "WS2016/17–WS2024/25",
+    "at_risk": 305,
+    "left": 23,
+    "hazard": 0.0754,
+    "surviving_before": 0.7367,
+    "share_of_entrants": 0.0556
    },
    {
     "cohort_def": "academic_year",
@@ -860,20 +905,20 @@
     "at_risk": 238,
     "left": 16,
     "hazard": 0.0672,
-    "surviving_before": 0.6806,
+    "surviving_before": 0.6811,
     "share_of_entrants": 0.0458
    },
    {
     "cohort_def": "academic_year",
     "fachsemester": 5,
     "event": "left_early",
-    "n_cohorts": 7,
-    "cohorts": "WS2016/17–WS2022/23",
-    "at_risk": 184,
-    "left": 14,
-    "hazard": 0.0761,
-    "surviving_before": 0.6349,
-    "share_of_entrants": 0.0483
+    "n_cohorts": 8,
+    "cohorts": "WS2016/17–WS2023/24",
+    "at_risk": 222,
+    "left": 21,
+    "hazard": 0.0946,
+    "surviving_before": 0.6353,
+    "share_of_entrants": 0.0601
    },
    {
     "cohort_def": "academic_year",
@@ -884,20 +929,20 @@
     "at_risk": 170,
     "left": 36,
     "hazard": 0.2118,
-    "surviving_before": 0.5865,
-    "share_of_entrants": 0.1242
+    "surviving_before": 0.5752,
+    "share_of_entrants": 0.1218
    },
    {
     "cohort_def": "academic_year",
     "fachsemester": 7,
     "event": "graduation",
-    "n_cohorts": 6,
-    "cohorts": "WS2016/17–WS2021/22",
-    "at_risk": 110,
-    "left": 30,
-    "hazard": 0.2727,
-    "surviving_before": 0.4623,
-    "share_of_entrants": 0.1261
+    "n_cohorts": 7,
+    "cohorts": "WS2016/17–WS2022/23",
+    "at_risk": 134,
+    "left": 36,
+    "hazard": 0.2687,
+    "surviving_before": 0.4534,
+    "share_of_entrants": 0.1218
    },
    {
     "cohort_def": "academic_year",
@@ -908,20 +953,20 @@
     "at_risk": 80,
     "left": 22,
     "hazard": 0.275,
-    "surviving_before": 0.3362,
-    "share_of_entrants": 0.0925
+    "surviving_before": 0.3316,
+    "share_of_entrants": 0.0912
    },
    {
     "cohort_def": "academic_year",
     "fachsemester": 9,
     "event": "graduation",
-    "n_cohorts": 5,
-    "cohorts": "WS2016/17–WS2020/21",
-    "at_risk": 45,
-    "left": 12,
-    "hazard": 0.2667,
-    "surviving_before": 0.2438,
-    "share_of_entrants": 0.065
+    "n_cohorts": 6,
+    "cohorts": "WS2016/17–WS2021/22",
+    "at_risk": 58,
+    "left": 15,
+    "hazard": 0.2586,
+    "surviving_before": 0.2404,
+    "share_of_entrants": 0.0622
    },
    {
     "cohort_def": "academic_year",
@@ -932,20 +977,20 @@
     "at_risk": 33,
     "left": 9,
     "hazard": 0.2727,
-    "surviving_before": 0.1788,
-    "share_of_entrants": 0.0488
+    "surviving_before": 0.1782,
+    "share_of_entrants": 0.0486
    },
    {
     "cohort_def": "academic_year",
     "fachsemester": 11,
     "event": "graduation",
-    "n_cohorts": 4,
-    "cohorts": "WS2016/17–WS2019/20",
-    "at_risk": 17,
-    "left": 3,
-    "hazard": 0.1765,
-    "surviving_before": 0.13,
-    "share_of_entrants": 0.0229
+    "n_cohorts": 5,
+    "cohorts": "WS2016/17–WS2020/21",
+    "at_risk": 24,
+    "left": 5,
+    "hazard": 0.2083,
+    "surviving_before": 0.1296,
+    "share_of_entrants": 0.027
    },
    {
     "cohort_def": "academic_year",
@@ -956,8 +1001,8 @@
     "at_risk": "",
     "left": "",
     "hazard": "",
-    "surviving_before": 0.1071,
-    "share_of_entrants": 0.1071
+    "surviving_before": 0.1026,
+    "share_of_entrants": 0.1026
    }
   ],
   "ws_only": [
@@ -977,13 +1022,13 @@
     "cohort_def": "ws_only",
     "fachsemester": 2,
     "event": "left_early",
-    "n_cohorts": 9,
-    "cohorts": "WS2016/17–WS2024/25",
-    "at_risk": 355,
-    "left": 64,
-    "hazard": 0.1803,
+    "n_cohorts": 10,
+    "cohorts": "WS2016/17–WS2025/26",
+    "at_risk": 403,
+    "left": 76,
+    "hazard": 0.1886,
     "surviving_before": 0.8742,
-    "share_of_entrants": 0.1576
+    "share_of_entrants": 0.1649
    },
    {
     "cohort_def": "ws_only",
@@ -994,20 +1039,20 @@
     "at_risk": 291,
     "left": 24,
     "hazard": 0.0825,
-    "surviving_before": 0.7166,
-    "share_of_entrants": 0.0591
+    "surviving_before": 0.7093,
+    "share_of_entrants": 0.0585
    },
    {
     "cohort_def": "ws_only",
     "fachsemester": 4,
     "event": "left_early",
-    "n_cohorts": 8,
-    "cohorts": "WS2016/17–WS2023/24",
-    "at_risk": 224,
-    "left": 17,
-    "hazard": 0.0759,
-    "surviving_before": 0.6575,
-    "share_of_entrants": 0.0499
+    "n_cohorts": 9,
+    "cohorts": "WS2016/17–WS2024/25",
+    "at_risk": 267,
+    "left": 21,
+    "hazard": 0.0787,
+    "surviving_before": 0.6508,
+    "share_of_entrants": 0.0512
    },
    {
     "cohort_def": "ws_only",
@@ -1018,20 +1063,20 @@
     "at_risk": 207,
     "left": 22,
     "hazard": 0.1063,
-    "surviving_before": 0.6076,
-    "share_of_entrants": 0.0646
+    "surviving_before": 0.5996,
+    "share_of_entrants": 0.0637
    },
    {
     "cohort_def": "ws_only",
     "fachsemester": 6,
     "event": "graduation",
-    "n_cohorts": 7,
-    "cohorts": "WS2016/17–WS2022/23",
-    "at_risk": 156,
-    "left": 35,
-    "hazard": 0.2244,
-    "surviving_before": 0.543,
-    "share_of_entrants": 0.1218
+    "n_cohorts": 8,
+    "cohorts": "WS2016/17–WS2023/24",
+    "at_risk": 185,
+    "left": 40,
+    "hazard": 0.2162,
+    "surviving_before": 0.5359,
+    "share_of_entrants": 0.1159
    },
    {
     "cohort_def": "ws_only",
@@ -1042,20 +1087,20 @@
     "at_risk": 121,
     "left": 33,
     "hazard": 0.2727,
-    "surviving_before": 0.4212,
-    "share_of_entrants": 0.1149
+    "surviving_before": 0.42,
+    "share_of_entrants": 0.1146
    },
    {
     "cohort_def": "ws_only",
     "fachsemester": 8,
     "event": "graduation",
-    "n_cohorts": 6,
-    "cohorts": "WS2016/17–WS2021/22",
-    "at_risk": 71,
-    "left": 19,
-    "hazard": 0.2676,
-    "surviving_before": 0.3063,
-    "share_of_entrants": 0.082
+    "n_cohorts": 7,
+    "cohorts": "WS2016/17–WS2022/23",
+    "at_risk": 88,
+    "left": 27,
+    "hazard": 0.3068,
+    "surviving_before": 0.3055,
+    "share_of_entrants": 0.0937
    },
    {
     "cohort_def": "ws_only",
@@ -1066,20 +1111,20 @@
     "at_risk": 52,
     "left": 14,
     "hazard": 0.2692,
-    "surviving_before": 0.2243,
-    "share_of_entrants": 0.0604
+    "surviving_before": 0.2118,
+    "share_of_entrants": 0.057
    },
    {
     "cohort_def": "ws_only",
     "fachsemester": 10,
     "event": "graduation",
-    "n_cohorts": 5,
-    "cohorts": "WS2016/17–WS2020/21",
-    "at_risk": 29,
-    "left": 8,
-    "hazard": 0.2759,
-    "surviving_before": 0.1639,
-    "share_of_entrants": 0.0452
+    "n_cohorts": 6,
+    "cohorts": "WS2016/17–WS2021/22",
+    "at_risk": 38,
+    "left": 10,
+    "hazard": 0.2632,
+    "surviving_before": 0.1547,
+    "share_of_entrants": 0.0407
    },
    {
     "cohort_def": "ws_only",
@@ -1090,8 +1135,8 @@
     "at_risk": 21,
     "left": 5,
     "hazard": 0.2381,
-    "surviving_before": 0.1187,
-    "share_of_entrants": 0.0283
+    "surviving_before": 0.114,
+    "share_of_entrants": 0.0271
    },
    {
     "cohort_def": "ws_only",
@@ -1102,8 +1147,8 @@
     "at_risk": "",
     "left": "",
     "hazard": "",
-    "surviving_before": 0.0905,
-    "share_of_entrants": 0.0905
+    "surviving_before": 0.0869,
+    "share_of_entrants": 0.0869
    }
   ]
  },

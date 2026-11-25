@@ -2681,5 +2681,123 @@
 "Ges": 1
 },
 "ok": true
+},
+{
+"sem": "WS2026/27",
+"title": "Computerlinguistik",
+"fs": "160",
+"deg": "Master",
+"kind": "HF",
+"vals": {
+">12": 1,
+"Ges": 1
+},
+"ok": true
+},
+{
+"sem": "WS2026/27",
+"title": "Computerlinguistik",
+"fs": "160",
+"deg": "nicht in BRD",
+"kind": "HF",
+"vals": {
+"1": 2,
+"Ges": 2
+},
+"ok": true
+},
+{
+"sem": "WS2026/27",
+"title": "Computerlinguistik",
+"fs": "160",
+"deg": "Promotion",
+"kind": "HF",
+"vals": {
+"2": 1,
+"4": 1,
+"Ges": 2
+},
+"ok": true
+},
+{
+"sem": "WS2026/27",
+"title": "Computerlinguistik / Computational Linguistics",
+"fs": "162",
+"deg": "Bachelor",
+"kind": "HF",
+"vals": {
+"1": 57,
+"2": 1,
+"3": 36,
+"4": 1,
+"5": 39,
+"6": 2,
+"7": 24,
+"8": 1,
+"9": 9,
+"10": 1,
+"11": 7,
+"12": 2,
+">12": 9,
+"Ges": 189
+},
+"ok": true
+},
+{
+"sem": "WS2026/27",
+"title": "Computerlinguistik / Computational Linguistics",
+"fs": "162",
+"deg": "Bachelor",
+"kind": "NF",
+"vals": {
+"1": 15,
+"2": 2,
+"3": 5,
+"5": 10,
+"7": 3,
+"8": 1,
+"9": 2,
+"10": 1,
+"12": 1,
+">12": 6,
+"Ges": 46
+},
+"ok": true
+},
+{
+"sem": "WS2026/27",
+"title": "Computerlinguistik / Computational Linguistics",
+"fs": "162",
+"deg": "Master",
+"kind": "HF",
+"vals": {
+"1": 36,
+"2": 15,
+"3": 29,
+"4": 7,
+"5": 8,
+"6": 7,
+"7": 8,
+"8": 6,
+"9": 4,
+"10": 2,
+"11": 2,
+"12": 1,
+">12": 1,
+"Ges": 126
+},
+"ok": true
+},
+{
+"sem": "WS2026/27",
+"title": "Computerlinguistik / Computational Linguistics",
+"fs": "162",
+"deg": "Promotion",
+"kind": "HF",
+"vals": {
+"8": 1,
+"Ges": 1
+},
+"ok": true
 }
 ]
